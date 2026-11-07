@@ -1,8 +1,8 @@
 [
   {
     "id": "settings",
-    "brand": "marby",
-    "tagline": "Boutique residential brokerage",
+    "brand": "Nanak Fabricators",
+    "tagline": " Built Strong, Built to Last",
     "consultation": {
       "label": "Get a consultation",
       "href": "/contact"
@@ -47,7 +47,7 @@
       }
     ],
     "footer": {
-      "description": "A boutique brokerage founded in 2009, representing buyers and sellers of exceptional properties.",
+      "description": "A reputable body fabrication and auto-body repair company with over ten year reputation in tippers, trailersfuel and water tankers, exhuasters and variety of custom-made bodies on all cars and trucks",
       "cta": {
         "label": "Contact us",
         "href": "/contact"
@@ -88,13 +88,13 @@
         "label": "Terms & Conditions",
         "href": "/terms-conditions"
       },
-      "copyright": "© 2026 Marby. All rights reserved.",
+      "copyright": "© 2026 Nanak Fabricators. All rights reserved.",
       "socialTitle": "Keep in touch"
     },
     "contact": {
       "label": "[ CONTACT]",
       "title": "find a home worth keeping",
-      "text": "No questionnaires. No automated funnels. A first conversation with a partner, at no cost and no obligation.",
+      "text": "No questionnaires. No automated funnels / chat bots. A first class conversation with an expert, at no cost and no obligation.",
       "image": "/assets/site/tYCb9XTbk5zfiJN56V1w0PshME.webp",
       "submit": "Send message",
       "fields": {
@@ -109,8 +109,8 @@
   {
     "id": "home",
     "hero": {
-      "title": "marby",
-      "text": "Half of what we sell never reaches a public listing. A discreet residential brokerage representing buyers and sellers in New York, San Francisco, and London — by introduction since 2009.",
+      "title": "Nanak Fabricators",
+      "text": "FROM THE FIRST MEASUREMENT TO COMPLETE BODY, WITH ACCURACY. BUILT TO LAST.",
       "video": "/assets/hero.mp4",
       "poster": "/assets/site/TBN2T3SDKf7U2Zk9enRTbFXuNo.webp"
     },
@@ -265,15 +265,15 @@
   {
     "id": "team",
     "label": "[ OUR TEAM ]",
-    "title": "the people behind the practice",
-    "text": "Seventy advisors across New York, San Francisco, and London. Architects, designers, lawyers, and a few former editors — the kind of people you might already know.",
+    "title": "Every great business is built on a good team",
+    "text": "Architects, contractors, engineers, sales and HR",
     "image": "/assets/site/laXYmGdVaPFZVOlbKI4tm95cM4.webp",
     "members": [
       {
         "number": "[01]",
-        "name": "Theo Marchetti",
+        "name": "Parminder Singh(Pami)",
         "post": "partner",
-        "city": "San Francisco",
+        "city": "Nairobi Area",
         "image": "/assets/site/nTvLN3RvxKgupZN1BenkRf4j5c.webp",
         "alt": "Theo Marchetti, partner at Marby, San Francisco"
       },
@@ -374,29 +374,32 @@
     "header": {
       "label": "[ About us ]",
       "title": [
-        "a practice,",
+        "A cultural craftmanship,",
         "not a platform"
       ]
     },
     "vision": {
       "image": "/assets/site/VsRe3CktSOqm10Cg3qnL6mzAo.webp",
       "label": "[ VISION & MISSION ]",
-      "title": "our path",
-      "text": "We exist to make residential real estate slow, considered, and intergenerational again.",
+      "title": "Our Path",
+      "text": "We exist to make Motor Dealers and Motor Companies find a one stop fully equipped workshop facility that can handle all major types of body repairs. With experience and trust built over the past decade; guaranteed professional work, quality end product, timely delivery and after sale services",
       "cards": [
         {
-          "title": "vision",
-          "text": "To be the residential brokerage that families return to for three generations — the one a daughter calls, twenty years after her mother bought her first home through us."
+          "title": "Our Vision",
+          "text": "Timely delivery of quality & well finished standard body trucks, on new and refurbished trucks, accident-damaged trucks and cars"
         },
         {
-          "title": "mission",
-          "text": "To represent people who treat their home as a long-term decision — and to give them, every time, a standard of work the industry has spent two decades trying to forget."
+          "title": "Our Mission",
+          "text": "To design, fabricate and fit professional grade bodies on all types of trucks; refurbished bodies; accident-damaged trucks& cars, with good quality finsh."
         }
       ]
     },
     "years": {
       "label": "[ FOREWORD ]",
-      "text": "Marby was founded in 2009 to represent residential real estate the way it deserves to be, slowly, attentively, and only for as many clients as we can know by name. Seventeen years later, that has not changed. The list has grown. The standard has not.",
+      "text": [
+        "Nanak Fabricators LTD over the past decade has accumulated a strong and healthy reputation in the fabrication of tippers, trailers, fuel tankers, water tankers, exhausters and a variety of custom-made bodies on all makes of cars and trucks across the East and Central African region,",
+        "We are experts in fabrication of all body types; panel-beating and spray painting chasis strengthening, frame and body alignment besides chassis extenstion and shortening."
+              ],
       "milestones": [
         {
           "title": "First milestone",

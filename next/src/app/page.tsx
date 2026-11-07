@@ -13,7 +13,7 @@ export default function Index() {
   return (
     <>
       <Base route="/"
-        title="Marby — Luxury Real Estate"
+        title="Nanak Fabricators LTD -- AutoMobile Transformers"
         description="Discover luxury properties and find your dream home with Marby's expert real estate team. Marby is a real estate template built with Next.js."
       >
         <Hero />

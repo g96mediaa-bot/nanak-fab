@@ -1,6 +1,6 @@
 ---
 order: 1
-title: "2026 Home Prices: Current Trends and Future Outlook"
+title: "2026 Fabrication Prices: Current Trends and Future Outlook"
 date: "2026-06-02"
 category: "Interior & Renovation"
 image: "/assets/blog/MXF1jrj1U4FH3R71NlmN87BSR4M.webp"

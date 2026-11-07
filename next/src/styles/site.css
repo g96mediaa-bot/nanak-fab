@@ -975,7 +975,7 @@ html.js [data-appear].is-in {
   .nav__tag {
     width: 162px;
     text-align: center;
-    color: rgb(20, 20, 20);
+    color: rgb(39, 7, 7);
     transition: color 0.2s ease;
   }
   .nav__tag.is-light { color: var(--ink-50); }
