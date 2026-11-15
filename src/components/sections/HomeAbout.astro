@@ -7,7 +7,7 @@ const { about } = await site('home');
   <div class="container about__inner">
     <div class="about__top">
       <div class="about__col">
-        <p class="t-caption2" data-appear>{about.label}</p>
+        <p class="t-caption2 eyebrow" data-appear>{about.label}</p>
         <img class="about__img" src={about.image} alt={about.imageAlt} width="473" height="234" loading="lazy" data-appear style="--appear-delay:0.1s;--appear-dur:var(--spring-04-dur);--appear-ease:var(--spring-04)" />
       </div>
       <div class="about__col about__col--text">
@@ -17,15 +17,70 @@ const { about } = await site('home');
       </div>
     </div>
     <div class="about__stats">
-      {about.stats.map((s: any, i: number) => (
-        <div class="stat" data-appear style={`--appear-delay:${0.5 + i * 0.1}s`}>
-          <p class="stat__label t-caption2">{s.label}</p>
-          <div class="stat__row">
-            <p class="t-h2 stat__value">{s.value}</p>
-            <p class="t-caption">{s.index}</p>
+      {about.stats.map((s: any, i: number) => {
+        const hasItems = Array.isArray(s.items) && s.items.length > 0;
+        const flippable = Boolean(s.description || hasItems || s.image);
+        const backId = `stat-back-${i}`;
+        return (
+          <div
+            class:list={['stat', flippable && 'stat--flippable']}
+            data-appear
+            data-flip={flippable ? 'true' : undefined}
+            style={`--appear-delay:${0.5 + i * 0.1}s`}
+          >
+            <div class="stat__inner">
+              <div class="stat__face stat__face--front" data-flip-front aria-hidden="false">
+                <div class="stat__head">
+                  <p class="stat__label t-caption2">{s.label}</p>
+                  {flippable && (
+                    <span class="stat__icon" aria-hidden="true">
+                      <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 6.5a5.5 5.5 0 0 0-9.4-2.2M2.5 9.5a5.5 5.5 0 0 0 9.4 2.2" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" />
+                        <path d="M12 1.5v3H9M4 14.5v-3h3" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                    </span>
+                  )}
+                </div>
+                {flippable && <p class="stat__hint t-caption">{s.hint ?? 'View details'}</p>}
+                <div class="stat__row">
+                  <p class="t-h2 stat__value">{s.value}</p>
+                  <p class="t-caption">{s.index}</p>
+                </div>
+              </div>
+              {flippable && (
+                <div class="stat__face stat__face--back" id={backId} data-flip-back aria-hidden="true">
+                  <div class="stat__head stat__head--back">
+                    <p class="stat__label t-caption2">{s.label}</p>
+                    <p class="t-caption">{s.index}</p>
+                  </div>
+                  {s.description && <p class="stat__desc t-body-sm">{s.description}</p>}
+                  {hasItems && (
+                    <ul class="stat__list t-body-sm">
+                      {s.items.map((item: string) => <li>{item}</li>)}
+                    </ul>
+                  )}
+                  {s.image && (
+                    <figure class="stat__figure">
+                      {s.imageLabel && <figcaption class="t-caption2">{s.imageLabel}</figcaption>}
+                      <img src={s.image} alt={s.imageAlt} width="1400" height="517" loading="lazy" />
+                    </figure>
+                  )}
+                </div>
+              )}
+            </div>
+            {flippable && (
+              <button
+                class="stat__trigger"
+                type="button"
+                data-flip-trigger
+                aria-expanded="false"
+                aria-controls={backId}
+                aria-label={`${String(s.label).trim()}: show details`}
+              ></button>
+            )}
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   </div>
 </section>
@@ -36,11 +91,126 @@ const { about } = await site('home');
   .about__col { flex: 1 1 0; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
   .about__col--text { max-width: 460px; }
   .about__img { width: 473px; max-width: 100%; height: 234px; object-fit: cover; border-radius: 8px; }
-  .about__stats { display: flex; gap: 20px; }
-  .stat { flex: 1 1 0; display: flex; flex-direction: column; gap: 80px; padding: 20px; border-radius: 8px; background: var(--ink-50); }
-  .stat__label { padding-bottom: 20px; box-shadow: inset 0 -1px 0 var(--ink-200); }
-  .stat__row { display: flex; align-items: flex-end; gap: 80px; }
+  .about__stats { display: flex; gap: 20px; align-items: stretch; }
+
+  /* stat card, front and (optional) flip side */
+  .stat { position: relative; flex: 1 1 0; min-width: 0; perspective: 1400px; }
+  .stat__inner {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.7s var(--ease-inout);
+  }
+  .stat__face {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: var(--ink-50);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+  }
+  .stat__face--front { justify-content: flex-start; }
+  .stat__head { display: flex; align-items: flex-start; gap: 12px; }
+  .stat__label { flex: 1 1 auto; padding-bottom: 20px; box-shadow: inset 0 -1px 0 var(--ink-200); }
+  .stat__icon {
+    display: none;
+    place-items: center;
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    color: var(--accent);
+  }
+  .stat__icon svg { width: 16px; height: 16px; }
+  .stat__hint { display: none; margin-top: -8px; }
+  .stat__row { display: flex; align-items: flex-end; gap: 80px; margin-top: auto; }
   .stat__value { flex: 1; }
+
+  html.js .stat--flippable .stat__icon { display: grid; }
+  html.js .stat--flippable .stat__hint { display: block; }
+  .stat--flippable .stat__trigger {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .stat--flippable .stat__trigger:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  .stat--flippable .stat__trigger:hover { background: transparent; }
+  .stat--flippable .stat__face--front { transition: background-color 0.25s ease; }
+  @media (hover: hover) and (pointer: fine) {
+    .stat--flippable:hover .stat__face--front { background: var(--white); }
+  }
+
+  /* back face */
+  .stat__face--back {
+    transform: rotateY(180deg);
+    gap: 12px;
+    background: var(--ink-950);
+    color: var(--white);
+  }
+  .stat__face--back .stat__label { box-shadow: inset 0 -1px 0 rgba(255, 253, 251, 0.24); color: var(--white); }
+  .stat__face--back .stat__head .t-caption { color: rgba(255, 253, 251, 0.6); }
+  .stat__desc { margin: 0; color: rgba(255, 253, 251, 0.9); line-height: 1.35; }
+  .stat__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    columns: 2;
+    column-gap: 20px;
+    font-size: var(--body-sm);
+    line-height: 1.2;
+    color: rgba(255, 253, 251, 0.9);
+  }
+  .stat__list li { position: relative; break-inside: avoid; margin-bottom: 8px; padding-left: 10px; }
+  .stat__list li::before {
+    content: '';
+    position: absolute;
+    top: 0.55em;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .stat__face--back:not(:has(.stat__list, .stat__figure)) .stat__desc { margin-block: auto; }
+  .stat__figure { display: flex; flex-direction: column; gap: 6px; width: 100%; max-width: 360px; margin: auto auto 0; }
+  .stat__figure figcaption { color: rgba(255, 253, 251, 0.6); }
+  .stat__figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background: var(--white);
+  }
+
+  /* flipped state (click / keyboard) and hover */
+  .stat--flippable.is-flipped .stat__inner { transform: rotateY(180deg); }
+  @media (hover: hover) and (pointer: fine) {
+    .stat--flippable:hover .stat__inner { transform: rotateY(180deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stat__inner { transition: none; transform: none; }
+    .stat--flippable.is-flipped .stat__inner { transform: none; }
+    .stat__face--back { transform: none; opacity: 0; visibility: hidden; }
+    .stat--flippable.is-flipped .stat__face--front,
+    .stat--flippable:hover .stat__face--front { opacity: 0; visibility: hidden; }
+    .stat--flippable.is-flipped .stat__face--back,
+    .stat--flippable:hover .stat__face--back { opacity: 1; visibility: visible; }
+  }
+
   @media (max-width: 1199.98px) {
     .about__top { flex-direction: column; }
   }

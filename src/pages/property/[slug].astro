@@ -30,14 +30,14 @@ const map = `https://maps.google.com/maps?q=${encodeURIComponent(d.location)}&z=
   <section class="pd">
     <nav class="crumbs" aria-label="Breadcrumb">
       <a class="t-body-sm link" href="/property">{L.crumb}</a>
-      <span class="t-body-sm c-300">/</span>
+      <span class="t-body-sm c-600">/</span>
       <span class="t-body-sm c-900 crumbs__current">{d.name}</span>
     </nav>
 
     <div class="pd__main">
       <div class="pd__name" data-appear="mount">
         <h1 class="t-h1">{d.name}</h1>
-        <p class="t-caption2">{d.number}</p>
+        <p class="t-caption2 eyebrow">{d.number}</p>
       </div>
 
       <div class="pd__top">
@@ -203,7 +203,7 @@ const map = `https://maps.google.com/maps?q=${encodeURIComponent(d.location)}&z=
   .quiet__name { display: flex; flex-direction: column; gap: 8px; }
 
   /* photo gallery modal */
-  .gallery { position: fixed; inset: 0; z-index: 6; background: rgba(27, 27, 40, 0.4); display: flex; justify-content: center; opacity: 0; }
+  .gallery { position: fixed; inset: 0; z-index: 6; background: rgba(40, 27, 56, 0.45); display: flex; justify-content: center; opacity: 0; }
   .gallery[hidden] { display: none; }
   .gallery.is-open { opacity: 1; transition: opacity 0.3s var(--ease-overlay); }
   .gallery__popup {
@@ -234,7 +234,7 @@ const map = `https://maps.google.com/maps?q=${encodeURIComponent(d.location)}&z=
   .room--bedroom .room__grid img { flex: 1 1 0; min-width: 0; height: 400px; }
   .room--exterior .room__grid { row-gap: 10px; }
   .room--exterior .room__grid img:last-child { grid-column: 1 / -1; height: 520px; }
-  :global(.lightbox) { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: rgba(27, 27, 40, 0.4); cursor: zoom-out; opacity: 0; }
+  :global(.lightbox) { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: rgba(40, 27, 56, 0.45); cursor: zoom-out; opacity: 0; }
   :global(.lightbox[hidden]) { display: none; }
   :global(.lightbox.is-open) { opacity: 1; transition: opacity var(--spring-04-dur) var(--spring-04); }
   :global(.lightbox img) { max-width: min(1000px, 100%); max-height: 100%; border-radius: 12px; }

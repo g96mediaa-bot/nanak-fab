@@ -31,6 +31,7 @@ const id = `faq-${n}-${q.length}`;
     color: var(--ink-900);
   }
   .qrow__btn :global(.icon) { transition: transform 0.4s var(--ease-accordion); }
+  .qrow.is-open .qrow__btn { background: var(--ink-950); color: var(--ink-50); }
   .qrow.is-open .qrow__btn :global(.icon) { transform: rotate(45deg); }
   .qrow__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.4s var(--ease-accordion); }
   .qrow__panel > div { overflow: hidden; }

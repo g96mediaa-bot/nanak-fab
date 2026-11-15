@@ -65,7 +65,7 @@ const s = await site('settings');
   .nav__tag {
     width: 162px;
     text-align: center;
-    color: rgb(20, 20, 20);
+    color: var(--ink-900);
     transition: color 0.2s ease;
   }
   .nav__tag.is-light { color: var(--ink-50); }
@@ -77,7 +77,7 @@ const s = await site('settings');
     height: 28px;
     padding: 4px 8px;
     border-radius: 4px;
-    background: var(--ink-900);
+    background: var(--ink-950);
     color: var(--white);
     cursor: pointer;
   }
@@ -155,7 +155,7 @@ const s = await site('settings');
       border-color var(--spring-04-dur) var(--spring-04);
   }
   @media (hover: hover) and (min-width: 810px) {
-    .menu__item:hover { padding-left: 12px; color: var(--ink-600); border-color: var(--ink-600); }
+    .menu__item:hover { padding-left: 12px; color: var(--accent-ink); border-color: var(--accent-ink); }
   }
   .menu__socials {
     display: flex;
@@ -165,7 +165,7 @@ const s = await site('settings');
     padding-top: 20px;
   }
   .menu__social { color: var(--ink-900); transition: color var(--spring-04-dur) var(--spring-04); }
-  .menu__social:hover { color: var(--ink-500); }
+  .menu__social:hover { color: var(--accent-ink); }
   .menu__bottom-cta { display: none; }
 
   @media (max-width: 809.98px) {

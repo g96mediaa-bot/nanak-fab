@@ -6,7 +6,7 @@ const n = testimonials.items.length;
 ---
 <section class="reviews">
   <div class="container reviews__inner">
-    <p class="t-caption2" data-appear>{testimonials.label}</p>
+    <p class="t-caption2 eyebrow" data-appear>{testimonials.label}</p>
     <div class="reviews__slider" data-reviews>
       <div class="reviews__slides">
         {testimonials.items.map((r: any, i: number) => (
@@ -60,8 +60,8 @@ const n = testimonials.items.length;
   .reviews__bars { width: 100%; display: flex; gap: 4px; }
   .reviews__bar { flex: 1; padding: 8px 0; cursor: pointer; }
   .reviews__bar span { display: block; height: 1px; background: var(--ink-200); }
-  .reviews__bar.is-active span { background: var(--ink-900); }
-  .reviews__count { font-family: var(--font-caption); font-size: 14px; line-height: 1.2; color: var(--ink-500); }
+  .reviews__bar.is-active span { background: var(--accent); }
+  .reviews__count { font-family: var(--font-caption); font-size: 14px; line-height: 1.2; color: var(--ink-600); }
   @media (max-width: 1199.98px) { .reviews { padding-block: 40px; } }
   @media (max-width: 809.98px) {
     .review { flex-direction: column; align-items: stretch; }

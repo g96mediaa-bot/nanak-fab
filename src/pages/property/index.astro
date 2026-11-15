@@ -13,7 +13,7 @@ const items = (await getCollection('properties')).sort((a, b) => a.data.number.l
 const categories = [...new Set(items.map((p) => p.data.category))].sort((a, b) => (a === 'for rent' ? -1 : 1));
 ---
 <Base
-  title="Properties for Sale — Marby Real Estate"
+  title="Properties for Sale — Nanak Real Estate"
   description="Browse our exclusive selection of luxury homes, apartments, and estates. Filter by location, size, and price to find the property that fits your vision."
 >
   <section class="phero" data-dark>
@@ -48,7 +48,7 @@ const categories = [...new Set(items.map((p) => p.data.category))].sort((a, b) =
     <div class="pfaq__inner">
       <div class="pfaq__head">
         <div class="pfaq__title">
-          <p class="t-caption2 c-500" data-appear>{faq.gridLabel}</p>
+          <p class="t-caption2 eyebrow" data-appear>{faq.gridLabel}</p>
           <h2 class="t-h1" data-appear style="--appear-delay:0.1s">{faq.title}</h2>
         </div>
         <p class="t-body-sm pfaq__text" data-appear style="--appear-delay:0.2s">{faq.text}</p>

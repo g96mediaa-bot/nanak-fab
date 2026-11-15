@@ -119,7 +119,7 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
     gap: 20px;
     padding: 20px;
     border-radius: 8px;
-    background: linear-gradient(180deg, rgba(20, 27, 52, 0) 3%, rgba(20, 27, 52, 0.15) 99%);
+    background: linear-gradient(180deg, rgba(64, 43, 92, 0) 3%, rgba(64, 43, 92, 0.16) 99%);
   }
   .field { width: 100%; display: flex; flex-direction: column; }
   .field input,
@@ -151,8 +151,8 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--ink-200);
-    color: var(--ink-900);
+    background: var(--accent);
+    color: var(--white);
     transition: background-color 0.2s var(--ease-inout);
   }
   .submit__label { flex: 1; text-align: left; }
@@ -161,14 +161,14 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: conic-gradient(from 0deg, var(--ink-900) 7deg, var(--white) 342deg);
+    background: conic-gradient(from 0deg, var(--ink-50) 7deg, rgba(246, 241, 236, 0.24) 342deg);
     -webkit-mask: radial-gradient(circle, transparent 5.5px, #000 6px);
     mask: radial-gradient(circle, transparent 5.5px, #000 6px);
     animation: spin 1s linear infinite;
   }
   .submit[data-state='loading'] .submit__icon { display: none; }
   .submit[data-state='loading'] .submit__spinner { display: block; }
-  .submit[data-state='error'] { background: rgba(255, 34, 68, 0.15); color: var(--ink-50); }
+  .submit[data-state='error'] { background: var(--accent-soft); color: var(--ink-50); }
   @media (hover: hover) { .submit:hover .btn__icon { transform: rotate(45deg); } }
   @keyframes spin { to { transform: rotate(360deg); } }
 
@@ -180,6 +180,7 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
   .footer__col { display: flex; flex-direction: column; gap: 20px; }
   .footer__col ul { display: flex; flex-direction: column; gap: 12px; }
   .footer__col li { display: flex; }
+  .footer .link { color: var(--ink-300); }
   .footer__links .link:hover,
   .footer__bottom .link:hover { color: var(--ink-50); }
   .footer__bottom { display: flex; justify-content: space-between; gap: 12px; }

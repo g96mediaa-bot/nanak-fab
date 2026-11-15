@@ -8,6 +8,7 @@ import { initJumpLinks } from './jumplinks';
 import { initGallery } from './gallery';
 import { initForms } from './form';
 import { initDeferredVideos } from './video';
+import { initFlipCards } from './flip';
 
 initSmooth();
 initAppear();
@@ -19,3 +20,4 @@ initJumpLinks();
 initGallery();
 initForms();
 initDeferredVideos();
+initFlipCards();

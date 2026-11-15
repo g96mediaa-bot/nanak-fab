@@ -12,7 +12,7 @@ const posts = (await getCollection('blog')).sort((a, b) => a.data.order - b.data
   description="Expert advice on anything partaining truck and bus bodies; chasis strengthening; fram
   and body alignment; panel beating and spray painting; and conversion of prime movers to tipepers"
 >
-  <PageHeader label={blog.header.label} title={blog.header.title} labelClass="t-caption" />
+  <PageHeader label={blog.header.label} title={blog.header.title} labelClass="t-caption eyebrow" />
   <section class="bgrid" data-filter>
     <div class="bgrid__tabs" data-appear="mount" style="--appear-delay:0.4s;--appear-y:150px" role="group" aria-label="Filter by category">
       <button class="tab" type="button" data-filter-tab="" aria-pressed="true">{blog.all}</button>

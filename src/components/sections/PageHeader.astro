@@ -1,7 +1,7 @@
 ---
 // Centred label + H1 used by About, Contact, Terms and Blog.
 interface Props { label: string; title: string | string[]; labelClass?: string }
-const { label, title, labelClass = 't-caption2' } = Astro.props;
+const { label, title, labelClass = 't-caption2 eyebrow' } = Astro.props;
 const lines = Array.isArray(title) ? title : [title];
 ---
 <section class="phead">
