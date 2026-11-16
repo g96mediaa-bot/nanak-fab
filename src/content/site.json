@@ -112,7 +112,7 @@
       "title": "Nanak Fabricators",
       "text": "FROM THE FIRST MEASUREMENT TO COMPLETE BODY, WITH ACCURACY. BUILT TO LAST.",
       "video": "/assets/hero.mp4",
-      "poster": "/assets/site/DJI_20000730113142_0925_D.webp"
+      "poster": "/assets/site/yardaerialview.webp"
     },
     "about": {
       "label": "[ ABOUT US]",
@@ -169,27 +169,144 @@
       "items": [
         {
           "counter": "/1",
-          "label": "Property [ 01 ]",
-          "title": "buying",
-          "image": "/assets/site/qH5xVjb1S38d5caXLweD8Cz3ss.webp",
+          "label": "Services[ 01 ]",
+          "title": "Double Drop High Sided Bodies",
+          "image": "/assets/site/whatwedo.webp",
           "text": "Buyer representation for clients acquiring a primary residence, a pied-à-terre, or a long-considered second home. We work to a brief — not a budget — and we are content to wait.",
           "button": "for buyers",
           "href": "/contact"
         },
         {
           "counter": "/2",
-          "label": "Property [ 02 ]",
-          "title": "selling",
-          "image": "/assets/site/SipSQ6yub533CYugujIVuOQgNg.webp",
+          "label": "Services [ 02 ]",
+          "title": "Enclosed Bodies",
+          "image": "/assets/site/tipper.webp",
           "text": "A sale conducted like a piece of editorial — photographed, written, and shown to the right people. We market least, and tend to sell closest to asking price.",
           "button": "for sellers",
           "href": "/contact"
         },
         {
           "counter": "/3",
-          "label": "Property [ 03 ]",
-          "title": "management",
-          "image": "/assets/site/Yr2OlgPcPFVFicsRXPwO8x7NIzo.webp",
+          "label": "Services [ 03 ]",
+          "title": "Tippers",
+          "image": "/assets/site/tipper_workshop.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/4",
+          "label": "Services [ 04 ]",
+          "title": "Normal Exhausters",
+          "image": "/assets/site/fabriwork.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/5",
+          "label": "Services [ 05 ]",
+          "title": "Water Bowsers",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/6",
+          "label": "Services [ 06 ]",
+          "title": "Pickup Bodies",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/7",
+          "label": "Services [ 07 ]",
+          "title": "Fuel Tanks",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/8",
+          "label": "Services [ 08 ]",
+          "title": "Tourist Vehicles",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/9",
+          "label": "Services [ 09 ]",
+          "title": "Livestock & High Sided Bodies Bodies",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/10",
+          "label": "Services [ 10 ]",
+          "title": "Trailers",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/11",
+          "label": "Services [ 11 ]",
+          "title": "Recovery Trucks",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/12",
+          "label": "Services [ 12]",
+          "title": "MobileWorkshops",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/13",
+          "label": "Services [ 13 ]",
+          "title": "Accident Repair",
+          "image": "/assets/site/accidentrepair.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/14",
+          "label": "Services [ 14 ]",
+          "title": "Hydraulic Exhausters",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/15",
+          "label": "Services [ 15 ]",
+          "title": "Low Drop Sided Bodies",
+          "image": "/assets/site/minilorry.webp",
+          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
+          "button": "for owners",
+          "href": "/contact"
+        },
+        {
+          "counter": "/16",
+          "label": "Services [ 16 ]",
+          "title": "Sales & Services",
+          "image": "/assets/site/minilorry.webp",
           "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
           "button": "for owners",
           "href": "/contact"
@@ -198,10 +315,10 @@
     },
     "listings": {
       "label": "[ PROJECTS ]",
-      "title": "featured listings",
+      "title": "Featured Finished Works",
       "cta": {
         "label": "view more",
-        "href": "/property"
+        "href": "/services"
       },
       "count": 4
     },
@@ -620,9 +737,9 @@
     "title": "terms & conditions",
     "sections": [
       {
-        "title": "1.  About Marby",
+        "title": "1.  About Nanak Fabricators Limited",
         "body": [
-          "Marby is an online platform that allows users to browse luxury property listings and connect with real estate agents. We are not a real estate broker, agent, or party to any transaction between users and agents or property owners."
+          "Nanak Fabricator LTD. is an online platform that allows users to browse luxury property listings and connect with real estate agents. We are not a real estate broker, agent, or party to any transaction between users and agents or property owners."
         ]
       },
       {

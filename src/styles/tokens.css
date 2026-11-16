@@ -7,7 +7,7 @@
  */
 :root {
   /* colour */
-  --ink-950: rgb(64, 43, 92); /* #402b5c — brochure cover plum */
+  --ink-950: rgb(27, 54, 135); /* #402b5c — brochure cover plum */
   --ink-900: rgb(38, 33, 28); /* #26211c — brochure text charcoal */
   --ink-800: rgb(58, 51, 45);
   --ink-700: rgb(82, 72, 63);
@@ -20,7 +20,7 @@
   --white: rgb(255, 253, 251); /* #fffdfb — warm paper */
   --ink-950-15: rgba(64, 43, 92, 0.16);
   --ink-50-20: rgba(246, 241, 236, 0.24);
-  --accent: rgb(210, 50, 43); /* #d2322b — brochure vermilion */
+  --accent: rgb(227, 30, 36); /* #d2322b — brochure vermilion */
   --accent-ink: rgb(200, 47, 40); /* #c82f28 — same vermilion, darkened for small type on warm paper */
   --accent-soft: rgba(210, 50, 43, 0.16);
   --error: rgb(210, 50, 43);

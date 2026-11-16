@@ -7,7 +7,7 @@ const { hero } = await site('home');
   <video class="hero__video" data-src={hero.video} poster={hero.poster} muted loop playsinline preload="none" aria-hidden="true"></video>
   <div class="scrim" aria-hidden="true"></div>
   <div class="container hero__inner">
-    <h1 class="hero__title" data-appear="mount">{hero.title}</h1>
+    <h1 class="hero__title" data-appear="mount"><span>{hero.title.slice(0, 6)}</span><span>{hero.title.slice(6)}</span> </h1>
     <p class="hero__text t-caption2 c-200" data-appear="mount" style="--appear-delay:0.2s">{hero.text}</p>
   </div>
 </section>
@@ -36,12 +36,19 @@ const { hero } = await site('home');
     gap: 12px;
     padding-bottom: 32px;
   }
-  .hero__title {
+  .hero__title  {
     width: 100%;
     font-size: var(--wordmark);
     font-weight: 500;
     line-height: 1.2;
     color: var(--ink-50);
+    
+  }
+  .hero__title span:nth-child(odd){
+    color: var(--ink-950);
+  }
+  .hero__title span:nth-child(even){
+    color: var(--accent);
   }
   .hero__text { width: 460px; max-width: 100%; }
   @media (min-width: 1200px) { .hero__title { width: 1158px; max-width: 100%; } }

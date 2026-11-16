@@ -1,0 +1,125 @@
+---
+const { 
+  beforeImage, 
+  afterImage, 
+  beforeLabel = 'Before', 
+  afterLabel = 'After' 
+} = Astro.props;
+---
+
+<div class="before-after-container">
+  <div class="image-wrapper after-image">
+    <img src={afterImage} alt="After" />
+    <span class="label after-label">{afterLabel}</span>
+  </div>
+  <div class="image-wrapper before-image" id="beforeLayer">
+    <img src={beforeImage} alt="Before" />
+    <span class="label before-label">{beforeLabel}</span>
+  </div>
+  <input 
+    type="range" 
+    min="0" 
+    max="100" 
+    value="50" 
+    class="slider-handle" 
+    aria-label="Percent of before photo shown"
+  />
+  <div class="slider-divider" id="divider"></div>
+</div>
+
+<style>
+  .before-after-container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 16 / 9;
+    user-select: none;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  .image-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .before-image {
+    width: 50%;
+    overflow: hidden;
+    z-index: 2;
+  }
+
+  .slider-handle {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 3;
+  }
+
+  .slider-divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: #ffffff;
+    z-index: 2;
+    pointer-events: none;
+    transform: translateX(-50%);
+  }
+
+  .slider-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    border: 2px solid #333;
+    border-radius: 50%;
+  }
+
+  .label {
+    position: absolute;
+    bottom: 16px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 0.85rem;
+    border-radius: 4px;
+  }
+
+  .before-label { left: 16px; }
+  .after-label { right: 16px; }
+</style>
+
+<script>
+  const container = document.querySelector('.before-after-container');
+  const beforeLayer = document.getElementById('beforeLayer');
+  const divider = document.getElementById('divider');
+  const slider = container?.querySelector('.slider-handle');
+
+  slider?.addEventListener('input', (e) => {
+    const val = (e.target as HTMLInputElement).value;
+    if (beforeLayer && divider) {
+      beforeLayer.style.width = `${val}%`;
+      divider.style.left = `${val}%`;
+    }
+  });
+</script>
