@@ -2,7 +2,7 @@
 import Btn from '../Btn.astro';
 import QuestionRow from '../ui/QuestionRow.astro';
 import { site } from '../../lib/site';
-interface Props { set?: 'general' | 'property'; imageAlt?: string; fill?: boolean; tightPhone?: boolean; rowOnTablet?: boolean }
+interface Props { set?: 'general' | 'work'; imageAlt?: string; fill?: boolean; tightPhone?: boolean; rowOnTablet?: boolean }
 const { set = 'general', imageAlt, fill = false, tightPhone = false, rowOnTablet = false } = Astro.props;
 const faq = await site('faq');
 const items = faq[set];
@@ -38,7 +38,7 @@ const items = faq[set];
   .faq__body { display: flex; align-items: flex-start; gap: 40px; }
   .faq__list { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 40px; }
   .faq__media { position: relative; flex: 1 1 0; min-width: 0; height: 404px; }
-  /* on the property page the image matches the height of the question list */
+  /* on a work detail page the image matches the height of the question list */
   .faq__media--fill { align-self: stretch; height: auto; }
   .faq__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: 8px; }
   @media (max-width: 1199.98px) {
@@ -46,7 +46,7 @@ const items = faq[set];
     .faq__side { max-width: 460px; width: 100%; }
     .faq__media { display: none; }
   }
-  /* the property page's FAQ has no inner gutter, so it runs 40px wider */
+  /* the work page's FAQ has no inner gutter, so it runs 40px wider */
   .faq--row .container { max-width: calc(var(--container) + 40px); }
   @media (max-width: 809.98px) {
     .faq--tight { padding-block: 40px; }

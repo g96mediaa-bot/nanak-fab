@@ -1,0 +1,322 @@
+---
+import Base from '../../layouts/Base.astro';
+import Btn from '../../components/Btn.astro';
+import Icon from '../../components/Icon.astro';
+import Faq from '../../components/sections/Faq.astro';
+import BeforeAfterSlider from '../../components/BeforeAfterSlider.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../../lib/site';
+
+export async function getStaticPaths() {
+  const items = await getCollection('work');
+  return items.map((p) => ({ params: { slug: p.id }, props: { p } }));
+}
+const { p } = Astro.props;
+const d = p.data;
+const work = await site('work');
+const settings = await site('settings');
+const L = work.labels;
+const specs = [
+  [L.chassis, d.chassis],
+  [L.bodyType, d.bodyType],
+  [L.capacity, d.capacity],
+  [L.applications, d.applications],
+  [L.completed, d.completed],
+  [L.finish, d.finish],
+];
+const tel = work.advisor.phone.replace(/[^+\d]/g, '');
+const hasRepair = Boolean(d.beforeImage && d.afterImage);
+---
+<Base
+  title={`${d.name} — Our Work | Nanak Fabricators`}
+  description={`${d.name} built on a ${d.chassis}. ${d.bodyType}, ${d.capacity}. Fabricated in-house at Nanak Fabricators, Athi River.`}
+  image={d.image}
+>
+  <section class="wd">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a class="t-body-sm link" href="/work">{L.crumb}</a>
+      <span class="t-body-sm c-600">/</span>
+      <span class="t-body-sm c-900 crumbs__current">{d.name}</span>
+    </nav>
+
+    <div class="wd__main">
+      <div class="wd__name" data-appear="mount">
+        <div class="wd__title">
+          <p class="t-caption2 eyebrow">{d.category}</p>
+          <h1 class="t-h1">{d.name}</h1>
+        </div>
+        <p class="t-caption2 eyebrow">{d.number}</p>
+      </div>
+
+      <div class="wd__top">
+        <div class="wd__img1" data-appear="mount" style="--appear-delay:0.1s">
+          <img src={d.image} alt={d.imageAlt} />
+        </div>
+        <div class="wd__side">
+          <div class="wd__img2" data-appear="mount" style="--appear-delay:0.2s">
+            <img src={d.secondaryImage} alt={d.secondaryImageAlt} />
+            {d.gallery.length > 0 && (
+              <button class="viewall" type="button" data-gallery-open>
+                <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true"><rect x="0.5" y="0.5" width="11" height="11" rx="2.5" fill="none" stroke="currentColor" /><path d="M3.5 14.5h8a3 3 0 0 0 3-3v-8" fill="none" stroke="currentColor" stroke-linecap="round" /></svg>
+                <span class="t-body-sm c-900">{L.viewAll}</span>
+              </button>
+            )}
+          </div>
+          <dl class="specs" data-appear="mount" style="--appear-delay:0.3s">
+            {specs.map(([k, v]) => (
+              <div class="specs__row"><dt class="t-caption2">{k}</dt><dd class="t-body-sm c-900">{v}</dd></div>
+            ))}
+          </dl>
+        </div>
+      </div>
+
+      <div class="wd__content">
+        <div class="wd__left">
+          <nav class="jump" data-jump data-jump-offset="140" aria-label="Sections" data-appear style="--appear-y:150px">
+            <a class="jump__link t-body-sm is-active" href="#overview">{L.overview}</a>
+            <a class="jump__link t-body-sm" href="#highlights">{L.highlights}</a>
+            <a class="jump__link t-body-sm" href="#workshop">{L.workshop}</a>
+          </nav>
+          <div class="prose wd__desc" id="overview" data-appear style="--appear-y:150px" set:html={p.rendered?.html} />
+
+          {hasRepair && (
+            <div class="wd__block" data-appear style="--appear-y:150px">
+              <h2 class="t-h5 wd__label">{L.repair}</h2>
+              <BeforeAfterSlider
+                beforeImage={d.beforeImage!}
+                afterImage={d.afterImage!}
+                beforeLabel="Before"
+                afterLabel="After"
+                alt={`${d.name} at Nanak Fabricators`}
+                caption={work.repairCaption}
+              />
+            </div>
+          )}
+
+          <div class="wd__block" id="highlights" data-appear style="--appear-y:150px">
+            <h2 class="t-h5 wd__label">{L.highlights}</h2>
+            <ul class="hl">
+              {[0, 2, 4, 1, 3, 5].map((i) => d.highlights[i]).filter(Boolean).map((h) => (
+                <li class="hl__item"><span class="hl__check"><Icon name="check" /></span><span class="t-caption2 c-900">{h}</span></li>
+              ))}
+            </ul>
+          </div>
+
+          {d.specs.length > 0 && (
+            <div class="wd__block" data-appear style="--appear-y:150px">
+              <h2 class="t-h5 wd__label">{L.specs}</h2>
+              <dl class="specs specs--wide">
+                {d.specs.map((s) => (
+                  <div class="specs__row"><dt class="t-caption2">{s.label}</dt><dd class="t-body-sm c-900">{s.value}</dd></div>
+                ))}
+              </dl>
+            </div>
+          )}
+
+          <div class="wd__block" id="workshop" data-appear style="--appear-y:150px">
+            <h2 class="t-h5 wd__label">{L.workshop}</h2>
+            <div class="ws">
+              <p class="t-body">{work.workshop.text}</p>
+              <div class="ws__rows">
+                <div class="ws__row">
+                  <p class="t-caption2">{L.address}</p>
+                  <p class="t-body-sm c-900">{work.workshop.address.join(', ')}</p>
+                </div>
+                <div class="ws__row">
+                  <p class="t-caption2">{L.hours}</p>
+                  <div>{work.workshop.hours.map((h: string) => <p class="t-body-sm c-900">{h}</p>)}</div>
+                </div>
+                <div class="ws__row">
+                  <p class="t-caption2">{L.phone}</p>
+                  <p class="t-body-sm c-900">{work.workshop.phone}</p>
+                </div>
+              </div>
+              <a class="ws__map" href={work.workshop.directions.href} target="_blank" rel="noreferrer">
+                <img src={work.workshop.image} alt={work.workshop.imageAlt} loading="lazy" />
+                <span class="ws__map-cta btn btn--secondary">{work.workshop.directions.label}<span class="btn__icon"><Icon name="arrow" /></span></span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <aside class="wd__aside">
+          <div class="advisor" data-appear style="--appear-ease:var(--ease-inout)">
+            <img class="advisor__img" src={work.advisor.image} alt={work.advisor.imageAlt} loading="lazy" />
+            <div class="advisor__body">
+              <div class="advisor__name">
+                <p class="t-caption2">{work.advisor.label}</p>
+                <p class="t-h5">{work.advisor.name}</p>
+              </div>
+              <div class="advisor__contact">
+                <a class="t-body-sm c-900" href={`tel:${tel}`}>{work.advisor.phone}</a>
+                <a class="t-body-sm c-900" href={`mailto:${work.advisor.email}`}>{work.advisor.email}</a>
+              </div>
+            </div>
+          </div>
+          <div class="quiet" data-appear style="--appear-ease:var(--ease-inout)">
+            <div class="quiet__name">
+              <p class="t-caption2 c-300">{work.quote.label}</p>
+              <p class="t-body-lg c-50">{work.quote.text}</p>
+            </div>
+            <Btn label={work.quote.cta.label} href={work.quote.cta.href} variant="secondary" />
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <Faq set="work" imageAlt={work.faqImageAlt} fill tightPhone rowOnTablet />
+
+  {d.gallery.length > 0 && (
+    <div class="gallery" hidden data-gallery role="dialog" aria-modal="true" aria-label={`${d.name} photos`}>
+      <div class="gallery__popup" data-jump-scroller data-lenis-prevent>
+        <div class="gallery__top">
+          <div class="gallery__bar">
+            <button class="gallery__close" type="button" aria-label="Close gallery" data-gallery-close><Icon name="close" size={24} /></button>
+            <Btn label={settings.consultation.label} href={settings.consultation.href} />
+          </div>
+        </div>
+        <section class="room">
+          <h3 class="t-h3">{L.photos}</h3>
+          <div class="room__grid">
+            {d.gallery.map((g) => (
+              <figure class="shot">
+                <img src={g.src} alt={g.alt} loading="lazy" data-lightbox />
+                {g.caption && <figcaption class="t-caption c-600">{g.caption}</figcaption>}
+              </figure>
+            ))}
+          </div>
+        </section>
+      </div>
+    </div>
+  )}
+</Base>
+
+<style>
+  .wd { padding: 40px 20px 80px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+  .wd .crumbs { width: 100%; max-width: var(--container); display: flex; align-items: center; gap: 4px; }
+  .wd .crumbs__current { max-width: 295px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wd__main { width: 100%; max-width: var(--container); display: flex; flex-direction: column; align-items: center; gap: 40px; }
+  .wd__name { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 12px 20px; border-radius: 8px; background: var(--ink-50); }
+  .wd__title { display: flex; flex-direction: column; gap: 8px; }
+  .wd__title h1 { max-width: 720px; }
+
+  .wd__top { width: 100%; display: flex; align-items: flex-start; gap: 20px; }
+  .wd__img1 { position: relative; flex: 1 1 0; min-width: 0; height: 464px; border-radius: 8px; overflow: hidden; }
+  .wd__img1 img, .wd__img2 img { width: 100%; height: 100%; object-fit: cover; }
+  .wd__side { flex: 1 1 0; min-width: 0; max-width: 340px; height: 464px; display: flex; flex-direction: column; gap: 40px; }
+  .wd__img2 { position: relative; flex: 1; min-height: 0; border-radius: 8px; overflow: clip; }
+  .viewall {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    height: 28px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: var(--ink-50);
+    color: var(--ink-900);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color var(--spring-04-dur) var(--spring-04);
+  }
+  .viewall:hover { background: var(--white); }
+  .specs, .near { margin: 0; width: 100%; display: flex; flex-direction: column; }
+  .specs__row, .near__row { display: flex; align-items: center; gap: 10px; padding: 4px 0 8px; box-shadow: inset 0 -1px 0 var(--ink-200); }
+  .specs__row:last-child { box-shadow: none; }
+  .specs__row dt, .near__row dt { flex: 1; }
+  .wd dd { margin: 0; text-align: right; }
+  .specs--wide { max-width: 720px; }
+
+  .wd__content { width: 100%; display: flex; align-items: flex-start; justify-content: center; gap: 20px; }
+  .wd__left { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 40px; }
+  .jump { position: sticky; top: 76px; z-index: 2; width: 100%; display: flex; gap: 4px; padding: 4px; border-radius: 12px; background: var(--ink-50); }
+  .jump__link { flex: 1; display: flex; justify-content: center; padding: 8px 12px; border-radius: 8px; background: var(--white); color: var(--ink-900); transition: background-color var(--spring-04-dur) var(--spring-04), color var(--spring-04-dur) var(--spring-04); }
+  .jump__link.is-active { background: var(--ink-950); color: var(--ink-50); }
+  .wd__desc { max-width: 700px; scroll-margin-top: 116px; }
+  .wd__block { width: 100%; max-width: 780px; display: flex; flex-direction: column; gap: 20px; scroll-margin-top: 116px; }
+  .wd__label { padding-bottom: 20px; box-shadow: inset 0 -1px 0 var(--ink-200); }
+  .hl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .hl__item { display: flex; align-items: center; gap: 10px; }
+  .hl__item > .t-caption2 { width: 204.67px; flex: none; }
+  .hl__check { flex: none; display: grid; place-items: center; padding: 8px; border-radius: 4px; background: var(--ink-50); color: var(--ink-900); }
+
+  .ws { display: flex; flex-direction: column; gap: 20px; }
+  .ws__rows { display: flex; flex-direction: column; }
+  .ws__row { display: flex; align-items: flex-start; gap: 20px; padding: 8px 0 12px; box-shadow: inset 0 -1px 0 var(--ink-200); }
+  .ws__row > :first-child { flex: 0 0 140px; }
+  .ws__map { position: relative; display: block; height: 320px; border-radius: 8px; overflow: clip; }
+  .ws__map img { width: 100%; height: 100%; object-fit: cover; }
+  .ws__map-cta { position: absolute; left: 20px; bottom: 20px; }
+
+  .wd__aside { flex: 1 1 0; max-width: 340px; position: sticky; top: 76px; display: flex; flex-direction: column; gap: 20px; }
+  .advisor { display: flex; align-items: stretch; gap: 20px; padding: 20px; border-radius: 8px; background: var(--ink-50); }
+  .advisor__img { width: 109px; flex: none; contain: size; object-fit: cover; border-radius: 8px; }
+  .advisor__body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
+  .advisor__name { display: flex; flex-direction: column; gap: 8px; }
+  .advisor__contact { height: 66px; display: flex; flex-direction: column; gap: 8px; padding-block: 12px; }
+  .quiet { display: flex; flex-direction: column; align-items: flex-start; gap: 20px; padding: 20px; border-radius: 8px; background: var(--ink-950); }
+  .quiet__name { display: flex; flex-direction: column; gap: 8px; }
+
+  /* photo gallery modal */
+  .gallery { position: fixed; inset: 0; z-index: 6; background: rgba(4, 0, 186, 0.35); display: flex; justify-content: center; opacity: 0; }
+  .gallery[hidden] { display: none; }
+  .gallery.is-open { opacity: 1; transition: opacity 0.3s var(--ease-overlay); }
+  .gallery__popup {
+    width: 100%;
+    max-width: var(--container);
+    height: 100vh;
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding: 0 40px 80px;
+    border-radius: 8px;
+    background: var(--ink-50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    transform: scale(0.98);
+  }
+  .gallery.is-open .gallery__popup { transform: none; transition: transform var(--spring-04-dur) var(--spring-04); }
+  .gallery__top { position: sticky; top: 0; z-index: 1; width: 100%; padding-top: 40px; background: var(--ink-50); display: flex; flex-direction: column; align-items: center; gap: 40px; }
+  .gallery__bar { width: 1000px; max-width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .gallery__close { width: 24px; height: 24px; color: var(--ink-900); }
+  .room { width: 1000px; max-width: 100%; display: flex; flex-direction: column; gap: 20px; }
+  .room__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .shot { display: flex; flex-direction: column; gap: 6px; }
+  .room__grid img { width: 100%; height: 300px; object-fit: cover; border-radius: 12px; cursor: zoom-in; }
+  .shot:first-child { grid-column: 1 / -1; }
+  .shot:first-child img { height: 460px; }
+  :global(.lightbox) { position: fixed; inset: 0; z-index: 20; display: grid; place-items: center; padding: 20px; background: rgba(4, 0, 186, 0.4); cursor: zoom-out; opacity: 0; }
+  :global(.lightbox[hidden]) { display: none; }
+  :global(.lightbox.is-open) { opacity: 1; transition: opacity var(--spring-04-dur) var(--spring-04); }
+  :global(.lightbox img) { max-width: min(1000px, 100%); max-height: 100%; border-radius: 12px; }
+
+  @media (max-width: 1199.98px) {
+    .wd { padding-bottom: 40px; }
+    .gallery__popup { padding: 0 20px 20px; gap: 32px; align-items: flex-start; }
+    .gallery__top { padding-top: 20px; }
+    .gallery__bar, .room { width: 100%; }
+    .room__grid { gap: 10px; }
+    .room__grid img { height: 240px; }
+    .shot:first-child img { height: 320px; }
+    .hl { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 809.98px) {
+    .wd__name { justify-content: space-between; gap: 20px; align-items: flex-start; }
+    .wd__top, .wd__content { flex-direction: column; align-items: stretch; }
+    .wd__content { gap: 40px; }
+    .wd__side { max-width: none; flex: none; height: auto; }
+    .wd__img1 { flex: none; }
+    .wd__img1, .wd__img2 { height: 280px; }
+    .wd__left { align-items: center; position: relative; }
+    .wd__aside { position: relative; top: auto; max-width: none; }
+    .jump__link { height: 42px; padding: 8px 16px; align-items: center; }
+    .hl__item > .t-caption2 { width: auto; flex: 1; }
+    .quiet { flex-direction: column; }
+    .gallery__popup { align-items: center; }
+    .room__grid { display: flex; flex-direction: column; gap: 16px; }
+    .room__grid img, .shot:first-child img { height: 220px; }
+    .ws__row { flex-direction: column; gap: 4px; }
+  }
+</style>

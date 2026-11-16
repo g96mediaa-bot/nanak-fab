@@ -1,0 +1,133 @@
+---
+import Base from '../layouts/Base.astro';
+import Btn from '../components/Btn.astro';
+import Icon from '../components/Icon.astro';
+import PageHeader from '../components/sections/PageHeader.astro';
+import BeforeAfterSlider from '../components/BeforeAfterSlider.astro';
+import { site } from '../lib/site';
+const services = await site('services');
+---
+<Base
+  title="Services — Body Fabrication, Panel Beating & Accident Repair | Nanak Fabricators"
+  description="Ten services from one Athi River workshop: vehicle body fabrication, panel beating and spray painting, accident repairs, heavy duty tippers, insulated bodies, fuel and water tanks, trailers and chassis work."
+>
+  <PageHeader label={services.header.label} title={services.header.title} />
+
+  <section class="intro">
+    <div class="container intro__inner">
+      <div class="intro__text">
+        <h2 class="t-h2" data-appear>One workshop, <span class="h-accent">ten services</span></h2>
+        <span class="rule-red" data-appear style="--appear-delay:0.1s"></span>
+        <p class="t-body" data-appear style="--appear-delay:0.2s">{services.intro.text}</p>
+        <div data-appear style="--appear-delay:0.3s"><Btn label={services.cta.label} href={services.cta.href} /></div>
+      </div>
+      <img class="intro__img" src={services.intro.image} alt={services.intro.imageAlt} loading="lazy" data-appear style="--appear-delay:0.2s" />
+    </div>
+  </section>
+
+  <section class="svcs">
+    <div class="container svcs__inner">
+      <div class="svcs__head">
+        <p class="t-caption2 eyebrow" data-appear>[ General services ]</p>
+        <h2 class="t-h2" data-appear style="--appear-delay:0.1s">what we do</h2>
+      </div>
+      <div class="svcs__grid">
+        {services.items.map((s: any, i: number) => (
+          <article class="scard" data-appear style={`--appear-delay:${0.1 + (i % 3) * 0.1}s`}>
+            <img class="scard__img" src={s.image} alt={s.title} loading="lazy" />
+            <div class="scard__body">
+              <div class="scard__top">
+                <p class="t-caption scard__num">{s.number}</p>
+                <span class="scard__icon"><Icon name="arrow" /></span>
+              </div>
+              <h3 class="t-h5">{s.title}</h3>
+              <p class="t-body-sm scard__text">{s.text}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="repair" data-dark>
+    <div class="container repair__inner">
+      <div class="repair__media" data-appear>
+        <BeforeAfterSlider
+          beforeImage="/assets/site/accident-before.webp"
+          afterImage="/assets/site/accident-after.webp"
+          beforeLabel="Before"
+          afterLabel="After"
+          alt="Isuzu FRR cab repaired at Nanak Fabricators"
+          caption="Drag or use the arrow keys to reveal the repair."
+        />
+      </div>
+      <div class="repair__text">
+        <p class="t-caption2 c-200" data-appear>{services.repair.label}</p>
+        <h2 class="t-h2 c-50" data-appear style="--appear-delay:0.1s">{services.repair.title}</h2>
+        <p class="t-body-sm c-200" data-appear style="--appear-delay:0.2s">{services.repair.text}</p>
+        <ul class="repair__list" data-appear style="--appear-delay:0.3s">
+          {services.repair.items.map((item: string) => (
+            <li><span class="repair__check"><Icon name="check" /></span><span class="t-body-sm c-50">{item}</span></li>
+          ))}
+        </ul>
+        <div data-appear style="--appear-delay:0.4s"><Btn label={services.repair.cta.label} href={services.repair.cta.href} variant="secondary" /></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container cta__inner">
+      <h2 class="t-h2" data-appear>Tell us what you need built</h2>
+      <p class="t-body" data-appear style="--appear-delay:0.1s">Send the chassis model, the load and the timeline. We will come back with a scope and a price.</p>
+      <div data-appear style="--appear-delay:0.2s"><Btn label={services.cta.label} href={services.cta.href} /></div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .intro { background: var(--white); padding-block: 40px 80px; }
+  .intro__inner { display: flex; align-items: center; gap: 40px; }
+  .intro__text { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; max-width: 560px; }
+  .intro__text h2 { max-width: 460px; }
+  .intro__text p { max-width: 500px; }
+  .intro__img { flex: 1 1 0; min-width: 0; height: 400px; object-fit: cover; border-radius: 8px; }
+
+  .svcs { background: var(--ink-50); padding-block: 80px; }
+  .svcs__inner { display: flex; flex-direction: column; gap: 40px; }
+  .svcs__head { display: flex; flex-direction: column; gap: 12px; }
+  .svcs__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .scard { display: flex; flex-direction: column; background: var(--white); border-radius: 8px; overflow: clip; }
+  .scard__img { width: 100%; height: 220px; object-fit: cover; }
+  .scard__body { display: flex; flex-direction: column; gap: 12px; padding: 20px; }
+  .scard__top { display: flex; align-items: center; justify-content: space-between; }
+  .scard__num { color: var(--accent-ink); }
+  .scard__icon { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 4px; background: var(--ink-50); color: var(--accent); }
+  .scard__icon :global(svg) { width: 16px; height: 16px; }
+  .scard__text { color: var(--ink-700); }
+
+  .repair { position: relative; padding-block: 80px; background: var(--ink-950); overflow: clip; }
+  .repair__inner { display: flex; align-items: center; gap: 40px; }
+  .repair__media { flex: 1 1 0; min-width: 0; }
+  .repair__media :global(figcaption) { color: var(--ink-300); }
+  .repair__text { flex: 1 1 0; min-width: 0; max-width: 500px; display: flex; flex-direction: column; align-items: flex-start; gap: 20px; }
+  .repair__list { display: flex; flex-direction: column; gap: 10px; }
+  .repair__list li { display: flex; align-items: center; gap: 10px; }
+  .repair__check { flex: none; display: grid; place-items: center; padding: 6px; border-radius: 4px; background: rgba(255, 255, 255, 0.12); color: var(--white); }
+
+  .cta { padding-block: 80px; background: var(--white); }
+  .cta__inner { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+  .cta__inner p { max-width: 560px; }
+
+  @media (max-width: 1199.98px) {
+    .intro { padding-bottom: 40px; }
+    .svcs, .repair, .cta { padding-block: 40px; }
+    .svcs__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 809.98px) {
+    .intro__inner, .repair__inner { flex-direction: column; align-items: stretch; }
+    .intro__text { max-width: none; }
+    .intro__img { height: 280px; }
+    .svcs__grid { grid-template-columns: 1fr; }
+    .repair__text { max-width: none; }
+  }
+</style>

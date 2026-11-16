@@ -41,16 +41,16 @@ input, textarea { font: inherit; }
 
 /* ---------- type presets ---------- */
 .t-h1, .t-h2, .t-h3, .t-h4, .t-h5, .t-h6 {
-  font-family: var(--font-sans);
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-weight: 600;
   color: var(--ink-900);
-  letter-spacing: 0;
+  letter-spacing: -0.02em;
   text-wrap: balance;
 }
-.t-h1 { font-size: var(--h1); line-height: 1.2; }
-.t-h2 { font-size: var(--h2); line-height: 1.2; }
-.t-h3 { font-size: var(--h3); line-height: 1.25; }
-.t-h4 { font-size: var(--h4); line-height: 1.3; }
+.t-h1 { font-size: var(--h1); line-height: 1.1; }
+.t-h2 { font-size: var(--h2); line-height: 1.12; font-weight: 700; }
+.t-h3 { font-size: var(--h3); line-height: 1.18; }
+.t-h4 { font-size: var(--h4); line-height: 1.24; }
 .t-h5 { font-size: var(--h5); line-height: 1.2; }
 .t-h6 { font-size: var(--h6); line-height: 1.2; }
 .t-body-lg, .t-body, .t-body-sm {
@@ -74,8 +74,27 @@ input, textarea { font: inherit; }
   text-transform: uppercase;
 }
 .balance { text-wrap: balance; }
-/* small all-caps kicker above a heading — the brochure's vermilion accent */
-.eyebrow { color: var(--accent-ink); }
+/* small all-caps kicker above a heading — numbered, red, with a short rule,
+   as on every section page of the brochure */
+.eyebrow {
+  color: var(--accent-ink);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background: currentColor;
+}
+/* accent word inside a heading (the brochure's red highlight) */
+.h-accent { color: var(--accent); }
+[data-dark] .h-accent { color: var(--accent-on-dark); }
+/* short red rule used under section headings */
+.rule-red { display: block; width: 40px; height: 2px; background: var(--accent); border-radius: 1px; }
 .c-900 { color: var(--ink-900); }
 .c-600 { color: var(--ink-600); }
 .c-500 { color: var(--ink-500); }
@@ -121,6 +140,11 @@ input, textarea { font: inherit; }
 .btn--icon { background: var(--ink-50); color: var(--ink-900); width: 32px; justify-content: center; }
 .btn--secondary .btn__icon,
 .btn--icon .btn__icon { color: var(--accent); }
+@media (hover: hover) {
+  .btn--primary:hover { background: var(--indigo); }
+  .btn--secondary:hover { background: var(--ink-300); }
+  .btn--icon:hover { background: var(--ink-200); }
+}
 @media (hover: hover) and (min-width: 810px) {
   .btn:hover .btn__icon,
   .hover-target:hover .btn__icon { transform: rotate(45deg); }
@@ -179,7 +203,7 @@ html.js [data-appear].is-in {
   pointer-events: none;
 }
 
-/* rich text (property descriptions, articles) */
+/* rich text (work descriptions, articles) */
 .prose { color: var(--ink-800); font-size: var(--body); line-height: 1.2; }
 .prose > * + * { margin-top: 20px; }
 .prose > :is(h1, h2, h3, h4, h5, h6):not(:first-child) { margin-top: 40px; }
@@ -187,13 +211,19 @@ html.js [data-appear].is-in {
 .prose h3 { font-size: var(--h3); line-height: 1.25; }
 .prose h4 { font-size: var(--h4); line-height: 1.3; }
 .prose h5 { font-size: var(--h5); line-height: 1.2; }
-.prose h2, .prose h3, .prose h4, .prose h5 { font-weight: 500; color: var(--ink-900); text-wrap: balance; }
+.prose h2, .prose h3, .prose h4, .prose h5 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink-900);
+  text-wrap: balance;
+}
 .prose ol { list-style: decimal; padding-left: 1.5em; }
 .prose ul { list-style: disc; padding-left: 1.5em; }
 .prose a { color: var(--ink-800); text-decoration: underline; }
 .prose a:hover { color: var(--accent-ink); }
 
-/* filter tabs (Blog Tabs / Property Tabs components) */
+/* filter tabs (blog and work grids) */
 .tab {
   flex: none;
   padding: 8px 12px;

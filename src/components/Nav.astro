@@ -1,6 +1,7 @@
 ---
 import Btn from './Btn.astro';
 import Icon from './Icon.astro';
+import Logo from './Logo.astro';
 import { site } from '../lib/site';
 
 const s = await site('settings');
@@ -18,7 +19,7 @@ const s = await site('settings');
       </button>
     </div>
     <a class="nav__col nav__col--tag" href="/" data-stop>
-      <span class="nav__tag t-caption2" data-invert>{s.tagline}</span>
+      <span class="nav__tag" data-invert><Logo size="sm" linked={false} /></span>
     </a>
     <div class="nav__col nav__col--cta" data-stop>
       <Btn label={s.consultation.label} href={s.consultation.href} />
@@ -32,7 +33,7 @@ const s = await site('settings');
       <button class="chip" type="button" aria-label="Close menu" data-menu-close>
         <Icon name="close" />
       </button>
-      <span class="t-h5">{s.brand}</span>
+      <span class="t-h5"><Logo size="sm" linked={false} /></span>
     </div>
     <div class="menu__top-cta"><Btn label={s.consultation.label} href={s.consultation.href} /></div>
   </div>
@@ -63,12 +64,18 @@ const s = await site('settings');
   .nav__col--tag { justify-content: center; }
   .nav__col--cta { justify-content: flex-end; }
   .nav__tag {
+    display: inline-flex;
+    align-items: center;
     width: 162px;
-    text-align: center;
+    justify-content: center;
     color: var(--ink-900);
     transition: color 0.2s ease;
   }
   .nav__tag.is-light { color: var(--ink-50); }
+  /* the wordmark flips to white over photography */
+  .nav__tag.is-light :global(.logo__name) { color: var(--white); }
+  .nav__tag.is-light :global(.logo__sub) { color: var(--peach); }
+  .nav__tag.is-light :global(.logo__n) { fill: var(--white); }
 
   .chip {
     display: grid;

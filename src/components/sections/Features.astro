@@ -28,8 +28,8 @@ const { features } = await site('home');
   </div>
 </section>
 <style>
-  .features { position: relative; overflow: clip; padding-block: 80px; }
-  .features__bg { position: absolute; inset: 1px 0 0; width: 100%; height: 100%; object-fit: cover; }
+  .features { position: relative; overflow: clip; padding-block: 80px; background: var(--ink-950); }
+  .features__bg { position: absolute; inset: 1px 0 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }
   .features__inner { position: relative; display: flex; flex-direction: column; gap: 40px; }
   .features__head { display: flex; align-items: flex-end; gap: 20px; }
   .features__title { flex: 1 1 0; display: flex; flex-direction: column; gap: 12px; }
@@ -39,29 +39,26 @@ const { features } = await site('home');
   .features__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
   .fcard {
     position: relative;
-    height: 213px;
+    min-height: 213px;
     padding: 20px;
     border-radius: 8px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
     border: 1px solid var(--ink-50-20);
-    background: var(--glass-cool);
+    background: linear-gradient(180deg, rgba(8, 6, 66, 0.72) 0%, rgba(4, 0, 40, 0.9) 100%);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     transition: background-color var(--spring-04-dur) var(--spring-04);
   }
-  .fcard__text { display: none; }
   .fcard__num { text-align: right; }
   @media (hover: hover) and (min-width: 1200px) {
     .fcard:hover { background: var(--ink-950); }
-    .fcard:hover .fcard__text { display: block; }
   }
   @media (max-width: 1199.98px) {
     .features__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    .fcard { background: var(--glass-warm); gap: 40px; }
-    .fcard__text { display: block; }
   }
   @media (max-width: 809.98px) {
     .features__head { flex-direction: column; align-items: flex-start; }

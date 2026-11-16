@@ -1,6 +1,7 @@
 ---
 import Btn from './Btn.astro';
 import Icon from './Icon.astro';
+import Logo from './Logo.astro';
 import { site } from '../lib/site';
 
 interface Props { withForm?: boolean }
@@ -52,19 +53,21 @@ const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
   <div class="container footer__inner">
     <div class="footer__top">
       <div class="footer__brand">
-        <p class="t-body-lg c-50">{s.brand}</p>
+        <Logo variant="light" size="md" linked={false} />
         <p class="t-caption c-200">{s.footer.description}</p>
         <Btn label={s.footer.cta.label} href={s.footer.cta.href} variant="secondary" />
       </div>
       <div class="footer__links">
-        <div class="footer__col">
-          <p class="t-body c-50">{s.footer.socialTitle}</p>
-          <ul>
-            {s.socials.map((x: any) => (
-              <li><a class="t-body-sm link" href={x.href} target="_blank" rel="noreferrer">{x.footerLabel}</a></li>
-            ))}
-          </ul>
-        </div>
+        {s.socials.length > 0 && (
+          <div class="footer__col">
+            <p class="t-body c-50">{s.footer.socialTitle}</p>
+            <ul>
+              {s.socials.map((x: any) => (
+                <li><a class="t-body-sm link" href={x.href} target="_blank" rel="noreferrer">{x.footerLabel}</a></li>
+              ))}
+            </ul>
+          </div>
+        )}
         {s.footer.columns.map((col: any) => (
           <div class="footer__col">
             <p class="t-body c-50">{col.title}</p>

@@ -7,8 +7,15 @@ const { hero } = await site('home');
   <video class="hero__video" data-src={hero.video} poster={hero.poster} muted loop playsinline preload="none" aria-hidden="true"></video>
   <div class="scrim" aria-hidden="true"></div>
   <div class="container hero__inner">
-    <h1 class="hero__title" data-appear="mount"><span>{hero.title.slice(0, 6)}</span><span>{hero.title.slice(6)}</span> </h1>
-    <p class="hero__text t-caption2 c-200" data-appear="mount" style="--appear-delay:0.2s">{hero.text}</p>
+    <h1 class="hero__title" data-appear="mount">
+      {hero.titleLines.map((line: any) => (
+        <span class:list={['hero__line', { 'h-accent': line.accent }]}>{line.text}</span>
+      ))}
+    </h1>
+    <div class="hero__foot" data-appear="mount" style="--appear-delay:0.2s">
+      <p class="hero__text t-caption2 c-200">{hero.text}</p>
+      <p class="hero__tag t-caption2 c-200">{hero.tagline}</p>
+    </div>
   </div>
 </section>
 <style>
@@ -26,35 +33,46 @@ const { hero } = await site('home');
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 55%;
     background: var(--ink-950);
+  }
+  /* the global scrim is sized for a caption; the hero carries a full title,
+     so it gets a deeper gradient to keep the type legible over the yard */
+  .hero .scrim {
+    height: 62%;
+    background: linear-gradient(0deg, rgba(4, 0, 186, 0.92) 0%, rgba(4, 0, 186, 0.55) 45%, rgba(4, 0, 186, 0) 100%);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
   }
   .hero__inner {
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 12px;
+    gap: 20px;
     padding-bottom: 32px;
   }
-  .hero__title  {
+  .hero__title {
     width: 100%;
-    font-size: var(--wordmark);
-    font-weight: 500;
-    line-height: 1.2;
-    color: var(--ink-50);
-    
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-display);
+    font-size: clamp(44px, 8.2vw, 140px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--white);
   }
-  .hero__title span:nth-child(odd){
-    color: var(--ink-950);
-  }
-  .hero__title span:nth-child(even){
-    color: var(--accent);
-  }
+  .hero__line { display: block; color: var(--white); }
+  .hero__line.h-accent { color: var(--accent-on-dark); }
+  .hero__foot { width: 100%; display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
   .hero__text { width: 460px; max-width: 100%; }
-  @media (min-width: 1200px) { .hero__title { width: 1158px; max-width: 100%; } }
+  .hero__tag { text-align: right; }
+  @media (min-width: 1200px) { .hero__title { max-width: 1158px; } }
   @media (max-width: 1199.98px) { .hero { height: 600px; } }
   @media (max-width: 809.98px) {
     .hero__inner { align-items: flex-start; }
-    .hero__text { width: 100%; }
+    .hero__foot { flex-direction: column; align-items: flex-start; }
+    .hero__text, .hero__tag { width: 100%; text-align: left; }
   }
 </style>

@@ -1,5 +1,5 @@
 /**
- * Tab + search filtering for the property and blog grids.
+ * Tab + search filtering for the work and blog grids.
  * [data-filter] > [data-filter-tab=value|""] buttons, optional [data-filter-search],
  * and [data-filter-item][data-tags][data-name] cards, [data-filter-empty] message.
  */

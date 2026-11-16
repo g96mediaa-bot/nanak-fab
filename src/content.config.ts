@@ -1,33 +1,30 @@
 import { defineCollection, z } from 'astro:content';
 import { glob, file } from 'astro/loaders';
 
-// One Markdown file per property. The body is the description; everything
-// else (specs, highlights, nearby places, gallery groups) is frontmatter.
-const properties = defineCollection({
-  loader: glob({ pattern: '*.md', base: './src/content/properties', generateId: ({ entry }) => entry.replace(/\.md$/, '') }),
+// One Markdown file per completed body. The body is the description; specs,
+// highlights and the photo gallery are frontmatter.
+const work = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/work', generateId: ({ entry }) => entry.replace(/\.md$/, '') }),
   schema: z.object({
     name: z.string(),
     number: z.string(),
-    category: z.enum(['for sale', 'for rent']),
+    category: z.string(),
     image: z.string(),
     imageAlt: z.string(),
     secondaryImage: z.string(),
     secondaryImageAlt: z.string(),
-    area: z.string(),
-    floors: z.coerce.string(),
-    bathrooms: z.coerce.string(),
-    bedrooms: z.coerce.string(),
-    location: z.string(),
-    buildYear: z.string(),
-    price: z.string(),
+    chassis: z.string(),
+    bodyType: z.string(),
+    capacity: z.string(),
+    applications: z.string(),
+    completed: z.string(),
+    finish: z.string().default('2-pack polyurethane'),
     highlights: z.array(z.string()).max(6),
-    nearby: z.array(z.object({ place: z.string(), time: z.string() })),
-    gallery: z.object({
-      bedroom: z.array(z.string()).default([]),
-      bathroom: z.array(z.string()).default([]),
-      kitchen: z.array(z.string()).default([]),
-      exterior: z.array(z.string()).default([]),
-    }),
+    specs: z.array(z.object({ label: z.string(), value: z.string() })).default([]),
+    gallery: z.array(z.object({ src: z.string(), alt: z.string(), caption: z.string().optional() })).default([]),
+    beforeImage: z.string().optional(),
+    afterImage: z.string().optional(),
+    featured: z.boolean().default(false),
   }),
 });
 
@@ -52,4 +49,4 @@ const site = defineCollection({
   schema: z.any(),
 });
 
-export const collections = { properties, blog, site };
+export const collections = { work, blog, site };

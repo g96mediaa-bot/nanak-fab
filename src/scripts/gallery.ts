@@ -1,6 +1,6 @@
 import { lockScroll } from './smooth';
 
-/** Property photo modal ("view all") plus a lightbox for any [data-lightbox] image. */
+/** Work photo modal ("view all") plus a lightbox for any [data-lightbox] image. */
 export function initGallery() {
   const modal = document.querySelector<HTMLElement>('[data-gallery]');
   document.querySelectorAll('[data-gallery-open]').forEach((b) => b.addEventListener('click', () => {

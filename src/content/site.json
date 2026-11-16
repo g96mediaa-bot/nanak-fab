@@ -1,10 +1,10 @@
 [
   {
     "id": "settings",
-    "brand": "Nanak Fabricators",
-    "tagline": " Built Strong, Built to Last",
+    "brand": "Nanak Fabricators Limited",
+    "tagline": "We strive for the best",
     "consultation": {
-      "label": "Get a consultation",
+      "label": "Request a quote",
       "href": "/contact"
     },
     "menu": [
@@ -17,8 +17,12 @@
         "href": "/about-us"
       },
       {
-        "label": "PROPERTIES",
-        "href": "/property"
+        "label": "SERVICES",
+        "href": "/services"
+      },
+      {
+        "label": "OUR WORK",
+        "href": "/work"
       },
       {
         "label": "BLOG",
@@ -29,40 +33,33 @@
         "href": "/contact"
       }
     ],
-    "socials": [
-      {
-        "label": "Twitter [ x ]",
-        "footerLabel": "Twitter [X]",
-        "href": "https://x.com"
-      },
-      {
-        "label": "Threads",
-        "footerLabel": "Threads",
-        "href": "https://www.threads.com"
-      },
-      {
-        "label": "Linkedin",
-        "footerLabel": "LinkedIn",
-        "href": "https://www.linkedin.com"
-      }
-    ],
+    "socials": [],
     "footer": {
-      "description": "A reputable body fabrication and auto-body repair company with over ten year reputation in tippers, trailersfuel and water tankers, exhuasters and variety of custom-made bodies on all cars and trucks",
+      "description": "Vehicle body fabrication, panel beating and spray painting, accident repair, tippers, trailers, fuel and water tanks, exhausters and chassis work. Built in Athi River since 2012.",
       "cta": {
-        "label": "Contact us",
-        "href": "/contact"
+        "label": "Get directions",
+        "href": "https://maps.google.com/?q=Khim+Business+Park+Athi+River+Kenya"
       },
+      "socialTitle": "Contact",
       "columns": [
         {
-          "title": "Quick links",
+          "title": "Company",
           "links": [
             {
               "label": "About",
               "href": "/about-us"
             },
             {
-              "label": "Properties",
-              "href": "/property"
+              "label": "Services",
+              "href": "/services"
+            },
+            {
+              "label": "Our Work",
+              "href": "/work"
+            },
+            {
+              "label": "Blog",
+              "href": "/blog"
             },
             {
               "label": "Contact",
@@ -71,15 +68,23 @@
           ]
         },
         {
-          "title": "Quick links",
+          "title": "Workshop",
           "links": [
             {
-              "label": "Blog",
-              "href": "/blog"
+              "label": "0703 450 080",
+              "href": "tel:+254703450080"
             },
             {
-              "label": "404",
-              "href": "/404"
+              "label": "0721 855 496",
+              "href": "tel:+254721855496"
+            },
+            {
+              "label": "nanakfabs@gmail.com",
+              "href": "mailto:nanakfabs@gmail.com"
+            },
+            {
+              "label": "Khim Business Park, Athi River",
+              "href": "https://maps.google.com/?q=Khim+Business+Park+Athi+River+Kenya"
             }
           ]
         }
@@ -88,49 +93,59 @@
         "label": "Terms & Conditions",
         "href": "/terms-conditions"
       },
-      "copyright": "© 2026 Nanak Fabricators. All rights reserved.",
-      "socialTitle": "Keep in touch"
+      "copyright": "© 2026 Nanak Fabricators Limited. All rights reserved.",
+      "socialTitleFallback": "Keep in touch"
     },
     "contact": {
-      "label": "[CONTACT]",
-      "title": "find a home worth keeping",
-      "text": "No questionnaires. No automated funnels / chat bots. A first class conversation with an expert, at no cost and no obligation.",
-      "image": "/assets/site/tYCb9XTbk5zfiJN56V1w0PshME.webp",
-      "submit": "Send message",
+      "label": "[ Start a project ]",
+      "title": "tell us what you need built",
+      "text": "Send the chassis model, the body you have in mind and where the vehicle is. We will come back with a scope, a price and a date.",
+      "image": "/assets/site/whatwedo.webp",
+      "submit": "Send enquiry",
       "fields": {
         "name": "Name",
-        "email": "Email",
-        "message": "Your message",
-        "success": "Thank you",
-        "error": "Something went wrong"
+        "email": "Email or phone",
+        "message": "Chassis / body / timeline",
+        "success": "Thank you — we will be in touch",
+        "error": "Something went wrong. Please call 0703 450 080."
       }
     }
   },
   {
     "id": "home",
     "hero": {
-      "title": "Nanak Fabricators",
-      "text": "FROM THE FIRST MEASUREMENT TO COMPLETE BODY, WITH ACCURACY. BUILT TO LAST.",
-      "video": "/assets/hero.mp4",
-      "poster": "/assets/site/yardaerialview.webp"
+      "titleLines": [
+        {
+          "text": "NANAK",
+          "accent": false
+        },
+        {
+          "text": "FABRICATORS",
+          "accent": true
+        }
+      ],
+      "text": "Truck bodies, tankers, trailers and accident repairs — fabricated, fitted and finished in-house at our Athi River workshop.",
+      "tagline": "We strive for the best",
+      "video": "/assets/hero-yard.mp4",
+      "poster": "/assets/site/hero-yard-poster.webp"
     },
     "about": {
-      "label": "[ ABOUT US]",
-      "image": "/assets/site/yardaerialview.webp",
-      "imageAlt": "Editorial image used on home page",
-      "title": "Over a decade of experience, compounding quietly",
-      "text": "Nanak Fabricators Ltd. is a reputable body fabrication and auto-body repair company established and\nregistered in 2012 with its main office located at Khim Business Park, Athi River. The company was founded\nby the late Hon. Jaswant Singh Matharu and is currently run by his son, Parminder Singh (Pami).\nOver the past 10 years, Nanak Fabricators Ltd. has accumulated a strong and healthy reputation in the\nfabrication of tippers, trallers, fuel tankers, water tankers, exhausters and a variety of custom-made bodies\non all makes of cars and trucks.\nAt Nanak Fabricators Ltd. we are experts in fabrication of all types of bodies; panel-beating and spray\npainting; chassis straightening, frame and body alignment; and also chassis extension and shortening.\nNanak Fabricators Ltd, repairs accident-damaged cars and trucks.",
+      "label": "[ About us ]",
+      "image": "/assets/site/whatwedo.webp",
+      "imageAlt": "Nanak technician fitting the side panels of a truck body",
+      "title": "Body builders first, since 2012",
+      "text": "Nanak Fabricators Ltd. was established and registered in 2012 at Khim Business Park, Athi River, by the late Hon. Jaswant Singh Matharu. The company is now run by his son, Parminder Singh (Pami), and has built a strong reputation in tippers, trailers, fuel and water tankers, exhausters and custom bodies on all makes of cars and trucks. We fabricate the body, straighten the chassis, beat the panels and finish the paint in one workshop — nothing is sent out and nothing leaves before it is right.",
       "cta": {
         "label": "Read our story",
         "href": "/about-us"
       },
       "stats": [
         {
-          "label": "General Services",
-          "value": null,
+          "label": "General services",
+          "value": "10",
           "index": "[01]",
-          "hint": "10 services",
-          "description": "A full range of repair and fabrication services for all types of vehicles and equipment, regardless of manufacturer and model.",
+          "hint": "What we do",
+          "description": "A full range of repair and fabrication work for cars, trucks and equipment, whatever the make or model.",
           "items": [
             "Vehicle Body Fabrication",
             "Panel Beating & Spray Painting",
@@ -145,18 +160,18 @@
           ]
         },
         {
-          "label": " Insurance Accident Repair Services",
-          "value": null,
+          "label": "Body types in our range",
+          "value": "15",
           "index": "[02]",
-          "hint": "What's covered",
-          "description": "From dents and scratches to severe crash repairs, we handle every type of accident repair on cars and trucks. Repairs are done in-house by our own team, never outsourced, and finished to the highest standards."
+          "hint": "Our work",
+          "description": "From a pickup load body to a 45-seat coach, a 20,000-litre fuel tanker or a hydraulic exhauster — designed, built and finished on site."
         },
         {
-          "label": "Clients served",
-          "value": null,
+          "label": "Clients & vehicle dealers",
+          "value": "15+",
           "index": "[03]",
-          "hint": "Clients & dealers",
-          "description": "A wide array of clients and motor vehicle dealers across Kenya trust us with their fleets.",
+          "hint": "Who we serve",
+          "description": "Fleets, sugar companies, logistics operators and motor vehicle dealers across Kenya trust us with their bodies and repairs.",
           "image": "/assets/site/nanak-clients.webp",
           "imageAlt": "Logos of clients and vehicle dealers served by Nanak Fabricators, including Swan Carriers, Sukari Industries, Kibos Sugar, Basco, Simba Colt, Tata Africa, Isuzu and Kenya Coach Industries",
           "imageLabel": "Clients & vehicle dealers"
@@ -164,161 +179,71 @@
       ]
     },
     "services": {
-      "label": "[ SERVICES ]",
+      "label": "[ Services ]",
       "title": "what we do",
       "items": [
         {
           "counter": "/1",
-          "label": "Services[ 01 ]",
-          "title": "Double Drop High Sided Bodies",
+          "label": "Services [ 01 ]",
+          "title": "Vehicle Body Fabrication",
           "image": "/assets/site/whatwedo.webp",
-          "text": "Buyer representation for clients acquiring a primary residence, a pied-à-terre, or a long-considered second home. We work to a brief — not a budget — and we are content to wait.",
-          "button": "for buyers",
-          "href": "/contact"
+          "text": "Bodies designed and built to the chassis and the load: tippers, drop sides, enclosed bodies, tankers and coach work. Measured on site, fabricated in-house.",
+          "button": "our work",
+          "href": "/work"
         },
         {
           "counter": "/2",
           "label": "Services [ 02 ]",
-          "title": "Enclosed Bodies",
+          "title": "Tippers & Conversions",
           "image": "/assets/site/tipper.webp",
-          "text": "A sale conducted like a piece of editorial — photographed, written, and shown to the right people. We market least, and tend to sell closest to asking price.",
-          "button": "for sellers",
-          "href": "/contact"
+          "text": "Heavy-duty tipper bodies with hydraulic hoists, and conversion of existing prime movers into tippers — hoist, tank, pipework and paint.",
+          "button": "our work",
+          "href": "/work/tippers"
         },
         {
           "counter": "/3",
           "label": "Services [ 03 ]",
-          "title": "Tippers",
-          "image": "/assets/site/tipper_workshop.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
+          "title": "Tankers & Bowsers",
+          "image": "/assets/site/fueltank.webp",
+          "text": "Fuel tanks, water bowsers, normal and hydraulic exhausters. Baffled shells, tested welds, valved discharge and hazard signage.",
+          "button": "our work",
+          "href": "/work/fuel-tanks"
         },
         {
           "counter": "/4",
           "label": "Services [ 04 ]",
-          "title": "Normal Exhausters",
-          "image": "/assets/site/fabriwork.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
+          "title": "Panel Beating & Spray Painting",
+          "image": "/assets/site/DSC_4492.webp",
+          "text": "Panel beating, metal finishing and spray painting in a proper booth. Colour-matched two-pack paint on cabs, bodies and coaches.",
+          "button": "our work",
+          "href": "/work/accident-repair"
         },
         {
           "counter": "/5",
           "label": "Services [ 05 ]",
-          "title": "Water Bowsers",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
+          "title": "Accident Repair",
+          "image": "/assets/site/accidentrepair.webp",
+          "text": "From dents and scratches to severe crash damage: cab straightening, chassis alignment, panel work and paint, with before-and-after records.",
+          "button": "our work",
+          "href": "/work/accident-repair"
         },
         {
           "counter": "/6",
           "label": "Services [ 06 ]",
-          "title": "Pickup Bodies",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/7",
-          "label": "Services [ 07 ]",
-          "title": "Fuel Tanks",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/8",
-          "label": "Services [ 08 ]",
-          "title": "Tourist Vehicles",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/9",
-          "label": "Services [ 09 ]",
-          "title": "Livestock & High Sided Bodies Bodies",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/10",
-          "label": "Services [ 10 ]",
-          "title": "Trailers",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/11",
-          "label": "Services [ 11 ]",
-          "title": "Recovery Trucks",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/12",
-          "label": "Services [ 12]",
-          "title": "MobileWorkshops",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/13",
-          "label": "Services [ 13 ]",
-          "title": "Accident Repair",
-          "image": "/assets/site/accidentrepair.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/14",
-          "label": "Services [ 14 ]",
-          "title": "Hydraulic Exhausters",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/15",
-          "label": "Services [ 15 ]",
-          "title": "Low Drop Sided Bodies",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
-        },
-        {
-          "counter": "/16",
-          "label": "Services [ 16 ]",
-          "title": "Sales & Services",
-          "image": "/assets/site/minilorry.webp",
-          "text": "For clients with homes they live in part of the year — or rent only to people they would have over for dinner. We treat every property as if it were our own address.",
-          "button": "for owners",
-          "href": "/contact"
+          "title": "Chassis Shortening & Extension",
+          "image": "/assets/site/fabriwork.webp",
+          "text": "Chassis shortened, extended, strengthened and aligned so a new body sits true and the truck tracks straight.",
+          "button": "our work",
+          "href": "/work"
         }
       ]
     },
     "listings": {
-      "label": "[ PROJECTS ]",
-      "title": "Featured Finished Works",
+      "label": "[ Our work ]",
+      "title": "Bodies we have built",
       "cta": {
-        "label": "view more",
-        "href": "/services"
+        "label": "view all work",
+        "href": "/work"
       },
       "count": 4
     },
@@ -326,126 +251,126 @@
       "label": "[ Testimonials ]",
       "items": [
         {
-          "quote": "\"We'd been searching for the right property in Greenwich for almost two years. Marby came in, understood exactly what we were looking for, and within six weeks we were under contract on something better than we'd imagined.\"",
-          "name": "Daniel Forsythe",
-          "location": "East Side, LA",
+          "quote": "\"We brought them a chassis and a rough idea. They came back with a body that has done three years of hard work without a weld letting go.\"",
+          "name": "Fleet manager",
+          "location": "Nairobi",
           "images": [
-            "/assets/site/dRuT2rBloAdrDAI6wQBcOmUAOI.webp",
-            "/assets/site/Zm4CCMAvJ2mRuZKcZYZIYVWrLg.webp",
-            "/assets/site/I9Fuu1jJsIscYQXIK7vu7gNijs.webp"
+            "/assets/site/tipper_workshop.webp",
+            "/assets/site/fabriwork.webp",
+            "/assets/site/tipper.webp"
           ]
         },
         {
-          "quote": "\"Sold our townhouse in the West Village through Marby after a recommendation from a friend. The editorial presentation they put together was stunning — professional photography, a proper campaign. We got three offers above asking in the first week.\"",
-          "name": "Emily Smith",
-          "location": "New York, NY",
+          "quote": "\"The accident repair was the part we worried about. The cab came back straight, the paint matched and the paperwork was ready for the assessor.\"",
+          "name": "Transport manager",
+          "location": "Athi River",
           "images": [
-            "/assets/site/dRuT2rBloAdrDAI6wQBcOmUAOI.webp",
-            "/assets/site/xtXfHVniXm6zJem4TQBrQJvEqI.webp",
-            "/assets/site/leouEp3HBZFGWCZo5Hkf0G6VI.webp"
+            "/assets/site/accidentrepair.webp",
+            "/assets/site/DSC_4492.webp",
+            "/assets/site/minilorry.webp"
           ]
         },
         {
-          "quote": "\"We've worked with a lot of property managers over the years across our portfolio. Marby's management team is in a different league — proactive, transparent, and genuinely invested in the assets. Seventeen years of experience shows in how they operate day to day.\"",
-          "name": "Marcus & Lena Beaumont",
-          "location": "Holland Park, London",
+          "quote": "\"One workshop for the body, the paint and the chassis work. That is why we keep coming back with the next unit.\"",
+          "name": "Dealer principal",
+          "location": "Mombasa Road",
           "images": [
-            "/assets/site/xlb4YKaKhbeBkSUICa4Go9Nou4.webp",
-            "/assets/site/e3kgoVcf2GpLpcafviXykPDHr4.webp",
-            "/assets/site/8YFM45QURTBAaKLBoUiyVRtPhs.webp"
+            "/assets/site/openlended.webp",
+            "/assets/site/whatwedo.webp",
+            "/assets/site/DJI_20000505082308_0631_D.webp"
           ]
         }
       ]
     },
     "features": {
-      "label": "[ FEATURES]",
-      "title": "we never compromise on",
-      "text": "Not bigger marketing or louder promises. Six small commitments, kept every time.",
+      "label": "[ How we work ]",
+      "title": "what every build gets",
+      "text": "Six commitments that hold whether the job is one pickup body or a fleet of tippers.",
       "cta": {
-        "label": "contact us",
+        "label": "request a quote",
         "href": "/contact"
       },
-      "image": "/assets/site/FErs8IfWxpBcZKQWKJBGw7lGfc.webp",
+      "image": "/assets/site/fabriwork.webp",
       "items": [
         {
-          "title": "a small book",
+          "title": "in-house fabrication",
           "number": "[ 01 ]",
-          "text": "Each advisor carries six to ten mandates — not sixty. The difference shows in everything from a returned call to a closing."
+          "text": "Cutting, folding, welding, panel beating and paint all happen under our roof. Nothing is subcontracted and nothing leaves half-finished."
         },
         {
-          "title": "off-market access",
+          "title": "measured, not guessed",
           "number": "[ 02 ]",
-          "text": "Roughly half of what changes hands at Marby never reaches a public portal. Discretion is not a feature — it is the practice."
+          "text": "We measure the chassis and the load before we draw the body, so the deck height, wheel clearance and weight distribution are right the first time."
         },
         {
-          "title": "editorial presentation",
+          "title": "a finish that lasts",
           "number": "[ 03 ]",
-          "text": "In-house photography, architectural floor plans, and copy written by people who have done it before. We market homes the way magazines used to."
+          "text": "Steel is prepared and primed properly before paint. That is why our bodies still look straight after years of loading and washdowns."
         },
         {
-          "title": "market intelligence",
+          "title": "a timeline you can plan around",
           "number": "[ 04 ]",
-          "text": "Quarterly briefings on the markets that matter to you — written, not generated. We track what sold, why, and what it tells us."
+          "text": "You get a build sequence and a handover date with the quote. We tell you early if a part or a chassis change moves it."
         },
         {
-          "title": "legal & financial coordination",
+          "title": "insurance-ready repairs",
           "number": "[ 05 ]",
-          "text": "We work alongside your counsel and bankers — or introduce ours. Closings handled with the seriousness they deserve."
+          "text": "Accident work is documented stage by stage, with photos and a clear scope, so assessors and fleet owners see exactly what was done."
         },
         {
-          "title": "post-close concierge",
+          "title": "after-sales support",
           "number": "[ 06 ]",
-          "text": "Architects, contractors, conservators, gardeners — the relationships that make moving in feel less like moving. Yours for the first year."
+          "text": "Hoists, hinges, latches and paint are all ours to stand behind. Bring the unit back and we will put it right."
         }
       ]
     }
   },
   {
     "id": "team",
-    "label": "[ OUR TEAM ]",
-    "title": "Every great business is built on a good team",
-    "text": "Architects, contractors, engineers, sales and HR",
-    "image": "/assets/site/laXYmGdVaPFZVOlbKI4tm95cM4.webp",
+    "label": "[ Our team ]",
+    "title": "Every body leaves the hands of a team that has done it before",
+    "text": "Fabricators, panel beaters, painters and fitters — one workshop, one accountable team.",
+    "image": "/assets/site/DJI_20000505081520_0620_D.webp",
     "members": [
       {
         "number": "[01]",
-        "name": "Parminder Singh(Pami)",
-        "post": "partner",
-        "city": "Nairobi Area",
-        "image": "/assets/site/nTvLN3RvxKgupZN1BenkRf4j5c.webp",
-        "alt": "Theo Marchetti, partner at Marby, San Francisco"
+        "name": "Parminder Singh (Pami)",
+        "post": "managing director",
+        "city": "Athi River",
+        "image": "/assets/site/DJI_20000505081520_0620_D.webp",
+        "alt": "The Nanak Fabricators team gathered in front of the workshop"
       },
       {
         "number": "[02]",
-        "name": "Imogen Hart",
-        "post": "senior advisor",
-        "city": "London",
-        "image": "/assets/site/WxSMsPHdbTFpWCoaYQwqSzSrkgU.webp",
-        "alt": "Imogen Hart, senior advisor at Marby, London"
+        "name": "Workshop Manager",
+        "post": "production & quality",
+        "city": "Athi River",
+        "image": "/assets/site/tipper_workshop.webp",
+        "alt": "A tipper under assembly on the workshop floor"
       },
       {
         "number": "[03]",
-        "name": "Julian Okafor",
-        "post": "advisor",
-        "city": "New York",
-        "image": "/assets/site/0sI5VagrmB1EzuiksRgzRaUAGuw.webp",
-        "alt": "Julian Okafor, advisor at Marby, New York"
+        "name": "Fabrication Lead",
+        "post": "cutting, folding & welding",
+        "city": "Athi River",
+        "image": "/assets/site/fabriwork.webp",
+        "alt": "A fabricator welding a body panel"
       },
       {
         "number": "[04]",
-        "name": "Sasha Reinhardt",
-        "post": "head of off-market",
-        "city": "New York",
-        "image": "/assets/site/n8URjE2xYKhSYFVM96y1lgUJwLQ.webp",
-        "alt": "Sasha Reinhardt, head of off-market at Marby, New York"
+        "name": "Panel & Paint Lead",
+        "post": "beating, prep & spray",
+        "city": "Athi River",
+        "image": "/assets/site/accidentrepair.webp",
+        "alt": "A repaired truck cab after panel and paint work"
       },
       {
         "number": "[05]",
-        "name": "Henry Tant",
-        "post": "senior advisor",
-        "city": "San Francisco",
-        "image": "/assets/site/I7A3AdDy2L9N4RMQXRxk5g1y2IQ.webp",
-        "alt": "Henry Tant, senior advisor at Marby, San Francisco"
+        "name": "Parts & Logistics",
+        "post": "hoists, fittings & delivery",
+        "city": "Athi River",
+        "image": "/assets/site/minilorry.webp",
+        "alt": "An enclosed body being fitted out in the workshop"
       }
     ]
   },
@@ -453,55 +378,55 @@
     "id": "faq",
     "label": "[ FAQ ]",
     "title": "questions & answers",
-    "text": "The questions we are asked most often, answered honestly. If yours isn't here, write directly to the partners — we read every note.",
+    "text": "The questions we are asked most often. If yours is not here, call the workshop — we would rather talk it through than guess.",
     "cta": {
       "label": "Get in touch",
       "href": "/contact"
     },
-    "image": "/assets/site/dnwWNzhzNWipdpEpwMtD9ZMqZg.webp",
-    "imageAlt": "Editorial real estate image used on the homepage",
+    "image": "/assets/site/tipper_workshop.webp",
+    "imageAlt": "A tipper body being assembled at the Nanak workshop",
     "general": [
       {
-        "q": "what does the buying process at Marby look like?",
-        "a": "It starts with a 30-minute conversation—no questionnaire, no obligation. Your advisor curates listings, arranges viewings, and guides you through every step to closing. Median engagement: 11 months."
+        "q": "how do I get a quote?",
+        "a": "Send us the chassis make and model, the body you need and the load you carry. If you can, bring the vehicle to Athi River so we can measure it. We will come back with a scope, a price and a build date."
       },
       {
-        "q": "how quickly can you sell a property?",
-        "a": "It starts with a 30-minute conversation—no questionnaire, no obligation. Your advisor curates listings, arranges viewings, and guides you through every step to closing. Median engagement: 11 months."
+        "q": "how long does a body take to build?",
+        "a": "A pickup or small drop-side body is usually a matter of days once the chassis is here. A tipper or tanker takes longer, and a coach body longer still. We agree the sequence and handover date with the quote."
       },
       {
-        "q": "do you handle rental management?",
-        "a": "It starts with a 30-minute conversation—no questionnaire, no obligation. Your advisor curates listings, arranges viewings, and guides you through every step to closing. Median engagement: 11 months."
+        "q": "can you build on a chassis I already own?",
+        "a": "Yes. Most of our work is on customer chassis, new or used. We inspect the frame first and tell you if it needs straightening, shortening or extending before a body goes on."
       },
       {
-        "q": "how often are listings updated?",
-        "a": "It starts with a 30-minute conversation—no questionnaire, no obligation. Your advisor curates listings, arranges viewings, and guides you through every step to closing. Median engagement: 11 months."
+        "q": "do you handle insurance accident repairs?",
+        "a": "Yes. We repair accident-damaged cars, pickups, trucks and buses for both insurers and private owners, and document each stage with photographs for the assessor."
       },
       {
-        "q": "do you work with first-time buyers?",
-        "a": "It starts with a 30-minute conversation—no questionnaire, no obligation. Your advisor curates listings, arranges viewings, and guides you through every step to closing. Median engagement: 11 months."
+        "q": "do you supply parts and fittings?",
+        "a": "We supply the hoists, hinges, latches, lighting and paint we use on our own bodies, and we can source chassis-specific parts for a repair. Ask us with the chassis number."
       }
     ],
-    "property": [
+    "work": [
       {
-        "q": "do you represent both buyers and sellers?",
-        "a": "Yes, we work with both sides of the transaction. Our approach is the same regardless — honest counsel, no pressure, and representation that puts your interests first."
+        "q": "which body should I choose for my chassis?",
+        "a": "It depends on the load and the routes. Tell us what you carry, how heavy it is and where it goes, and we will recommend a body and a deck height that keeps the truck legal and stable."
       },
       {
-        "q": "what types of properties do you specialize in?",
-        "a": "We focus on residential properties in the premium segment — single-family homes, townhouses, and curated multi-unit buildings. Each listing we take on is one we'd genuinely stand behind."
+        "q": "can you match my fleet colours?",
+        "a": "Yes. We mix and match two-pack paint to your fleet colour or a sample panel, and finish lettering, stripes and hazard markings in-house."
       },
       {
-        "q": "can I see a property before it officially hits the market?",
-        "a": "Often, yes. A significant portion of our transactions happen off-market. If you're registered with us, you'll hear about relevant opportunities before they're publicly listed."
+        "q": "do you convert prime movers into tippers?",
+        "a": "Yes. We fit the hoist, hydraulic tank and pipework, reinforce the frame where needed, and build the tipper body around the existing chassis."
       },
       {
-        "q": "what makes Marby different from a large brokerage?",
-        "a": "Scale works against intimacy. At Marby, every client works directly with a partner — not an associate, not an assistant. That continuity changes the quality of advice you receive."
+        "q": "how is the body fixed to the chassis?",
+        "a": "With a braced sub-frame and properly rated mounts, not direct-to-frame welds. That keeps the body serviceable and avoids cracking the chassis rails."
       },
       {
-        "q": "do you work outside of your primary markets?",
-        "a": "On a selective basis. If a client we know well needs representation in a market we don't cover directly, we'll either extend our involvement or connect them with someone we trust. We don't hand people off blindly."
+        "q": "can I see a unit before I commit?",
+        "a": "Come to Athi River. There is usually a body in fabrication and finished units in the yard, and we will walk you through the joints, the finish and the fittings."
       }
     ],
     "gridLabel": "[ FAQS ]",
@@ -512,80 +437,80 @@
     "header": {
       "label": "[ About us ]",
       "title": [
-        "A cultural craftmanship,",
-        "not a platform"
+        "We build bodies",
+        "that earn their keep"
       ]
     },
     "vision": {
       "image": "/assets/site/DSC_4492.webp",
-      "label": "[ VISION & MISSION ]",
-      "title": "Our Path",
-      "text": "We exist to make Motor Dealers and Motor Companies find a one stop fully equipped workshop facility that can handle all major types of body repairs. With experience and trust built over the past decade; guaranteed professional work, quality end product, timely delivery and after sale services",
+      "label": "[ Vision & mission ]",
+      "title": "Our path",
+      "text": "We exist to give motor dealers and motor companies one fully equipped workshop that can handle every major body repair. A decade of experience, a team that stays, and a finish we are happy to put our name on.",
       "cards": [
         {
           "title": "Our Vision",
-          "text": "Timely delivery of quality & well finished standard body trucks, on new and refurbished trucks, accident-damaged trucks and cars"
+          "text": "Timely delivery of quality, well-finished bodies on new and refurbished trucks, and on accident-damaged trucks and cars."
         },
         {
           "title": "Our Mission",
-          "text": "To design, fabricate and fit professional grade bodies on all types of trucks; refurbished bodies; accident-damaged trucks& cars, with good quality finsh."
+          "text": "To design, fabricate and fit professional-grade bodies on all types of trucks, refurbish bodies, and repair accident-damaged trucks and cars with a good quality finish."
         }
       ]
     },
     "years": {
-      "label": "[ FOREWORD ]",
+      "label": "[ Foreword ]",
       "text": [
-        "Nanak Fabricators LTD over the past decade has accumulated a strong and healthy reputation in the fabrication of tippers, trailers, fuel tankers, water tankers, exhausters and a variety of custom-made bodies on all makes of cars and trucks across the East and Central African region,",
-        "We are experts in fabrication of all body types; panel-beating and spray painting chasis strengthening, frame and body alignment besides chassis extenstion and shortening."
-              ],
+        "Nanak Fabricators Ltd. has spent more than a decade building a strong and healthy reputation in the fabrication of tippers, trailers, fuel tankers, water tankers, exhausters and a variety of custom-made bodies on all makes of cars and trucks across East and Central Africa.",
+        "We are experts in fabrication of all body types, panel beating and spray painting, chassis strengthening, frame and body alignment, and chassis extension and shortening."
+      ],
       "milestones": [
         {
-          "title": "First milestone",
-          "year": "2011",
-          "text": "$100M in aggregate sales. The first hire — Theo Marchetti, a former architect — joins as second advisor."
+          "title": "Founded",
+          "year": "2012",
+          "text": "Nanak Fabricators Ltd. is registered at Khim Business Park, Athi River, by the late Hon. Jaswant Singh Matharu."
         },
         {
-          "title": "San Francisco",
+          "title": "First fleet work",
           "year": "2014",
-          "text": "Pacific Heights office opens in a restored carriage house. Theo takes the West Coast practice."
+          "text": "Body fabrication for sugar, logistics and construction fleets around Athi River and Nairobi."
         },
         {
-          "title": "London",
+          "title": "Panel & paint",
           "year": "2018",
-          "text": "A third office opens in a Notting Hill mews. Imogen Hart leads, after eleven years at an interiors magazine."
+          "text": "Accident repair, panel beating and spray painting brought fully in-house for dealers and insurers."
         },
         {
-          "title": "The Journal",
+          "title": "The range grows",
           "year": "2022",
-          "text": "Marby’s editorial publication launches — market notes, essays, and quarterly letters, written in-house."
+          "text": "Tankers, exhausters, agricultural trailers and coach bodies join the tipper and drop-side work."
         },
         {
-          "title": "Now",
+          "title": "Today",
           "year": "2026",
-          "text": "Seventy advisors. Three cities. $2.4B in aggregate sales. Eighty-four percent of work comes from referral."
+          "text": "Parminder Singh (Pami) leads a workshop that builds fifteen body types and repairs every major make on Kenyan roads."
         }
       ]
     },
     "beliefs": {
-      "label": "[ A MANIFESTO ]",
+      "label": "[ Our approach ]",
       "title": "what we believe",
-      "image": "/assets/site/yardaerialview.webp",
-      "imageAlt": "A team of drivers posing infront of NF trucks",
+      "image": "/assets/site/hero-yard-poster.webp",
+      "imageAlt": "Aerial view of the Nanak Fabricators yard with completed trucks",
       "items": [
         {
           "label": "[ 01 ]",
-          "title": "a home is not a transaction",
-          "text": "It isxzc a decade-long decision, and it should be made by people, not by algorithms or alerts. Our job is to slow the decision down, not to speed it up."
+          "title": "the body is part of the truck",
+          "text": "A body is not a box dropped onto a chassis. Weight, deck height, mounts and frame strength are engineering decisions, and we make them before we cut steel."
         },
         {
           "label": "[ 02 ]",
-          "title": "discretion is a practice, not a favour",
-          "text": "Roughly half of what changes hands at Marby never reaches a public portal. We don’t talk about closings unless asked, and we don’t ask to be quoted in the press."
+          "title": "finish is not a coat of paint",
+          "text": "Preparation is most of the work: bare metal cleaned, seams sealed, panels blocked flat, then primed and painted. The shine is the last five percent."
         },
         {
           "label": "[ 03 ]",
-          "title": "marketing is the last thing, not the first",
-          "text": "We start with the building. Then the photographs. Then the words. We market least and tend to sell closest to ask — because the work was done before the listing went live."
+          "title": "one workshop, one signature",
+          "text": "Fabrication, panel work, paint and fit-out all happen here. When one team owns the whole job, nothing gets lost between suppliers."
         }
       ]
     }
@@ -594,67 +519,54 @@
     "id": "contact",
     "header": {
       "label": "[ Contact ]",
-      "title": "get in touch with Marby"
+      "title": "bring us the chassis"
     },
     "offices": [
       {
         "counter": "/1",
-        "label": "OFFICE [ 01 ]",
-        "city": "New York",
-        "image": "/assets/site/SNFoaRFEV2OUSoyhXGiZgC3hGDI.webp",
-        "imagePhone": "/assets/site/rn8l7GjeUxSbYWi5KAQfXT7Irh4.webp",
-        "text": "A three-floor walk-up above what used to be a tailor's shop. Sixteen years on, the door still opens onto the same quiet street and the kettle is still on.",
+        "label": "Workshop [ 01 ]",
+        "city": "Athi River",
+        "image": "/assets/site/hero-yard-poster.webp",
+        "imagePhone": "/assets/site/hero-yard-poster.webp",
+        "text": "The workshop and yard sit at Khim Business Park on Mombasa Road. Bodies in fabrication, completed units and the panel and paint bays are all on the same site.",
         "address": [
-          "123 Example Street, Floor 3",
-          "Tribeca, New York"
+          "Khim Business Park, Mombasa Road",
+          "Athi River, Machakos County",
+          "P.O. Box 402-00204"
         ],
         "hours": [
-          "Mon — Fri · 9:00 — 18:00",
-          "Sat by appointment · Sun closed"
+          "Mon — Fri · 8:00 — 17:00",
+          "Sat · 8:00 — 13:00",
+          "Sun · closed"
         ],
-        "phone": "+1 (212) 555 — 0182",
-        "tel": "+12125550182",
-        "email": "ny@example.com"
+        "phone": "0703 450 080",
+        "tel": "+254703450080",
+        "email": "nanakfabs@gmail.com"
       },
       {
         "counter": "/2",
-        "label": "OFFICE [ 02 ]",
-        "city": "London",
-        "image": "/assets/site/bfL7Ao45wBC4ZwjZrjbdi17M3k.webp",
-        "text": "A charming two-story flat nestled above a quaint bookshop. After a decade, the entrance still leads to the same side street, where the aroma of freshly brewed tea fills the air.",
+        "label": "Sales & accidents [ 02 ]",
+        "city": "Talk to Pami",
+        "image": "/assets/site/tipper_workshop.webp",
+        "imagePhone": "/assets/site/tipper_workshop.webp",
+        "text": "For new body enquiries, fleet work and accident repairs, speak to Parminder Singh (Pami) directly. Send photographs and the chassis number if the vehicle cannot be driven.",
         "address": [
-          "45 Example Street, 2nd Floor",
-          "Marylebone, London"
+          "Khim Business Park, Mombasa Road",
+          "Athi River, Machakos County",
+          "P.O. Box 402-00204"
         ],
         "hours": [
-          "Mon — Fri · 9:00 — 18:00",
-          "Sat by appointment · Sun closed"
+          "Mon — Fri · 8:00 — 17:00",
+          "Sat · 8:00 — 13:00",
+          "Sun · closed"
         ],
-        "phone": "+44 20 7946 0958",
-        "tel": "+442079460958",
-        "email": "london@example.com"
-      },
-      {
-        "counter": "/3",
-        "label": "OFFICE [ 03 ]",
-        "city": "San Francisco",
-        "image": "/assets/site/aKHyia7GDbqGBjpIt8DrrX3Ty0.webp",
-        "text": "A restored carriage house set behind a courtyard of Japanese maples. Theo Marchetti opens the door most mornings before the coffee shop next door.",
-        "address": [
-          "210 Example Street",
-          "Pacific Heights, San Francisco"
-        ],
-        "hours": [
-          "Mon — Fri · 9:00 — 18:00",
-          "Sat by appointment · Sun closed"
-        ],
-        "phone": "+1 (415) 555 — 0214",
-        "tel": "+14155550214",
-        "email": "sf@example.com"
+        "phone": "0792 283 286",
+        "tel": "+254792283286",
+        "email": "pami.nanakfabs@gmail.com"
       }
     ],
     "cta": {
-      "label": "Schedule a visit",
+      "label": "Request a quote",
       "href": "/contact"
     },
     "labels": {
@@ -662,70 +574,185 @@
       "hours": "HOURS",
       "phone": "PHONE NUMBER",
       "email": "Direct email",
-      "image": "Office interior image"
+      "image": "Nanak Fabricators workshop"
     }
   },
   {
-    "id": "property",
+    "id": "work",
     "hero": {
-      "title": "property listing",
-      "image": "/assets/site/Eelve4sm9YDSwp7WmV6Lr3Le4.webp"
+      "title": "our work",
+      "image": "/assets/site/tipper_workshop.webp"
     },
-    "empty": "Sorry, no items were found for this query",
+    "empty": "No body types match that search. Try a different word, or call the workshop.",
     "advisor": {
-      "label": "lead advisor",
-      "name": "Julian Okafor",
-      "phone": "+1 (212) 555 — 0182",
-      "email": "julian@example.com",
-      "image": "/assets/site/7ZMFyi4JpzAMhjCiEjpggOiaF4.webp",
-      "imageAlt": "Portrait of a lead advisor in a gray blazer against a warm orange background"
+      "label": "talk to the workshop",
+      "name": "Parminder Singh (Pami)",
+      "phone": "0792 283 286",
+      "email": "pami.nanakfabs@gmail.com",
+      "image": "/assets/site/fabriwork.webp",
+      "imageAlt": "A Nanak fabricator welding a body panel in the workshop"
     },
-    "quietList": {
-      "label": "off market interest",
-      "text": "Looking for something similar? We hold a quiet list of four pre-war townhouses not currently public.",
+    "workshop": {
+      "text": "Every body on this page was built, fitted and finished at Khim Business Park, Athi River. Come and see the workshop, the jigs and the units in the yard before you commit.",
+      "address": [
+        "Khim Business Park, Mombasa Road",
+        "Athi River, Machakos County"
+      ],
+      "hours": [
+        "Mon — Fri · 8:00 — 17:00",
+        "Sat · 8:00 — 13:00"
+      ],
+      "phone": "0703 450 080",
+      "image": "/assets/site/hero-yard-poster.webp",
+      "imageAlt": "Aerial view of the Nanak Fabricators workshop and yard",
+      "directions": {
+        "label": "get directions",
+        "href": "https://maps.google.com/?q=Khim+Business+Park+Athi+River+Kenya"
+      }
+    },
+    "quote": {
+      "label": "not sure what fits?",
+      "text": "Send us the chassis model and the load you carry. We will tell you which body works, what it costs and when it can be ready.",
       "cta": {
-        "label": "request quiet list",
+        "label": "request a quote",
         "href": "/contact"
       }
     },
-    "faqImageAlt": "Property detail page supporting image",
+    "faqImageAlt": "A truck body being fabricated at the Nanak workshop",
+    "repairCaption": "The same Isuzu FRR cab, before and after a full accident repair at our Athi River workshop.",
     "labels": {
-      "crumb": "Property Listing",
+      "crumb": "Our Work",
       "all": "all",
-      "search": "Search…",
-      "area": "AREA",
-      "floors": "floors",
-      "bathrooms": "Bathrooms",
-      "bedrooms": "BEDROOMS",
-      "location": "LOCATION",
-      "buildYear": "Build year",
-      "price": "PRICE",
+      "search": "Search body types",
+      "chassis": "CHASSIS",
+      "bodyType": "BODY TYPE",
+      "capacity": "CAPACITY",
+      "applications": "APPLICATIONS",
+      "completed": "COMPLETED",
+      "finish": "FINISH",
+      "specs": "specifications",
       "overview": "overview",
       "highlights": "highlights",
-      "locationTitle": "location",
-      "viewAll": "view all",
-      "rooms": {
-        "bedroom": "bedroom",
-        "bathroom": "bathroom",
-        "kitchen": "kitchen",
-        "exterior": "exterior"
+      "workshop": "workshop",
+      "repair": "accident repair",
+      "photos": "photo gallery",
+      "address": "ADDRESS",
+      "hours": "HOURS",
+      "phone": "PHONE",
+      "viewAll": "view all"
+    }
+  },
+  {
+    "id": "services",
+    "header": {
+      "label": "[ Services ]",
+      "title": [
+        "From the chassis",
+        "to the finish"
+      ]
+    },
+    "intro": {
+      "text": "Ten general services, all carried out by our own team at Khim Business Park. Bring us a bare chassis, a damaged cab or a fleet that needs standardising — the sequence starts in the same place.",
+      "image": "/assets/site/whatwedo.webp",
+      "imageAlt": "Nanak technicians fitting out a truck body"
+    },
+    "items": [
+      {
+        "number": "[ 01 ]",
+        "title": "Vehicle Body Fabrication",
+        "text": "Bodies designed around the chassis and the load — tippers, drop sides, enclosed bodies, high sides, pickups and coach work.",
+        "image": "/assets/site/whatwedo.webp"
+      },
+      {
+        "number": "[ 02 ]",
+        "title": "Panel Beating & Spray Painting",
+        "text": "Dents beaten out, panels replaced and blocked flat, then primed and painted in a booth to a matched two-pack finish.",
+        "image": "/assets/site/DSC_4492.webp"
+      },
+      {
+        "number": "[ 03 ]",
+        "title": "Accident Repairs",
+        "text": "Cars, pickups, trucks and buses repaired after collision damage, with cab straightening, chassis alignment and a documented repair.",
+        "image": "/assets/site/accidentrepair.webp"
+      },
+      {
+        "number": "[ 04 ]",
+        "title": "Heavy Duty Tippers",
+        "text": "Tipper bodies with hydraulic hoists, reinforced floors and sides, built for quarry, sand and construction haulage.",
+        "image": "/assets/site/tipper.webp"
+      },
+      {
+        "number": "[ 05 ]",
+        "title": "Insulated Bodies",
+        "text": "Insulated bodies for food, horticulture and fishing — panelled, sealed and lined to hold temperature on the road.",
+        "image": "/assets/site/minilorry.webp"
+      },
+      {
+        "number": "[ 06 ]",
+        "title": "Fuel Tanks",
+        "text": "Baffled fuel tank bodies with lockable fillers, vents, earthing points and hazard signage, pressure-tested before paint.",
+        "image": "/assets/site/fueltank.webp"
+      },
+      {
+        "number": "[ 07 ]",
+        "title": "Agricultural Trailers",
+        "text": "Drop-side farm trailers built heavier than road-only units, with leaf-spring suspension and protected lighting looms.",
+        "image": "/assets/site/openlended.webp"
+      },
+      {
+        "number": "[ 08 ]",
+        "title": "Chassis Shortening & Extension",
+        "text": "Frames shortened, extended, strengthened and aligned so a new or replacement body sits true and the truck tracks straight.",
+        "image": "/assets/site/fabriwork.webp"
+      },
+      {
+        "number": "[ 09 ]",
+        "title": "Water Tanks",
+        "text": "Water bowsers for construction, dust suppression and supply, with baffled shells, manholes and valved discharge.",
+        "image": "/assets/site/fueltank.webp"
+      },
+      {
+        "number": "[ 10 ]",
+        "title": "Conversion of Prime Movers to Tippers",
+        "text": "Existing prime movers converted to tippers: hoist, hydraulic tank, pipework and body, engineered around the original chassis.",
+        "image": "/assets/site/tipper_workshop.webp"
       }
+    ],
+    "repair": {
+      "label": "[ Accident repair ]",
+      "title": "Straightened, beaten and painted in-house",
+      "text": "Accident repair is the other half of the workshop. Cabs are stripped, pulled and straightened on the frame, panels are beaten or replaced, and the repair is primed, blocked and painted to a matched finish. Every stage is photographed so insurers and owners can see what was done under the paint.",
+      "items": [
+        "Cab and chassis straightening",
+        "Panel beating and replacement",
+        "Computer-matched two-pack paint",
+        "Insurance assessment documentation"
+      ],
+      "cta": {
+        "label": "book a repair",
+        "href": "/contact"
+      }
+    },
+    "cta": {
+      "label": "request a quote",
+      "href": "/contact"
     }
   },
   {
     "id": "blog",
     "header": {
-      "label": "[ Blog ]",
+      "label": "[ Workshop notes ]",
       "title": "our newsroom"
     },
     "categories": [
-      "Buyer's Guide",
-      "Interior & Renovation",
-      "Buying & Selling"
+      "Body building",
+      "Maintenance",
+      "Accident repair",
+      "Compliance"
     ],
     "empty": "No items",
     "related": {
-      "label": "[ BLOG ]",
+      "label": "[ Blog ]",
       "title": "related articles"
     },
     "crumb": "Blog",
@@ -733,72 +760,67 @@
   },
   {
     "id": "terms",
-    "label": "[ Last updated: June 19, 2026 ]",
+    "label": "[ Last updated: November 2026 ]",
     "title": "terms & conditions",
     "sections": [
       {
         "title": "1.  About Nanak Fabricators Limited",
         "body": [
-          "Nanak Fabricator LTD. is an online platform that allows users to browse luxury property listings and connect with real estate agents. We are not a real estate broker, agent, or party to any transaction between users and agents or property owners."
+          "Nanak Fabricators Limited is a vehicle body fabrication, panel beating, spray painting and accident repair workshop based at Khim Business Park, Mombasa Road, Athi River, Kenya. These terms apply to quotations, orders, repairs and any work carried out by us."
         ]
       },
       {
-        "title": "2.  Eligibility",
+        "title": "2.  Quotations and orders",
         "body": [
-          "You must be at least 18 years old and legally capable of entering into binding contracts to use Marby."
+          "A quotation is valid for thirty days unless stated otherwise. An order is confirmed when you accept the quotation in writing and pay the agreed deposit. Changes to the scope, chassis or specification may change the price and the delivery date."
         ]
       },
       {
-        "title": "3. Use of the Platform",
+        "title": "3.  Lead times",
         "body": [
-          "You agree to:"
-        ],
-        "list": [
-          "Use Marby only for lawful purposes.",
-          "Provide accurate information when contacting agents or creating an account.",
-          "Not misuse, copy, scrape, or interfere with the platform or its content."
+          "Lead times are given in good faith and depend on the specification, parts availability and the condition of the chassis. We will tell you as soon as we know a date has moved."
         ]
       },
       {
-        "title": "4. Listings & Information",
+        "title": "4.  Deposits and payment",
         "body": [
-          "All property listings, images, prices, and descriptions are provided by third parties (agents, agencies, or owners). Marby does not guarantee the accuracy, completeness, or availability of any listing. Always verify details directly with the agent before making decisions."
+          "A deposit is required before fabrication begins. The balance is payable before collection unless credit terms have been agreed in writing. Vehicles may be retained until outstanding amounts are settled."
         ]
       },
       {
-        "title": "5. Connecting with Agents",
+        "title": "5.  Vehicle storage and collection",
         "body": [
-          "Marby facilitates introductions between users and agents but is not responsible for any communication, agreement, transaction, or dispute that results. Any contract you enter into is solely between you and the agent or seller."
+          "Vehicles are stored at our yard at the owner's risk. Please collect within seven days of being told the work is complete; storage after that may be charged."
         ]
       },
       {
-        "title": "6. Intellectual Property",
+        "title": "6.  Warranty",
         "body": [
-          "All content on Marby — including the logo, brand, design, and software — belongs to Marby or its licensors. You may not reproduce, distribute, or use it without written permission"
+          "We stand behind our fabrication and paint work. Warranty periods and exclusions are stated on the quotation or invoice. Wear items, accident damage after handover, and work carried out by others are not covered."
         ]
       },
       {
-        "title": "7. User Content",
+        "title": "7.  Insurance repairs",
         "body": [
-          "If you submit reviews, inquiries, or other content, you grant Marby a non-exclusive, royalty-free license to display and use it on the platform."
+          "For insurance work we repair to the scope approved by the assessor. Additional damage found after stripping is reported before extra work proceeds. The policyholder remains responsible for any excess or unapproved amount."
         ]
       },
       {
-        "title": "8. Disclaimer",
+        "title": "8.  Intellectual property",
         "body": [
-          "Marby is provided “as is” without warranties of any kind. We do not guarantee uninterrupted, error-free service or that any property will meet your expectations."
+          "Drawings, photographs and specifications we produce remain our property. You may not reproduce them for another fabricator without written permission."
         ]
       },
       {
-        "title": "9. Limitation of Liability",
+        "title": "9.  Liability",
         "body": [
-          "To the maximum extent permitted by law, Marby is not liable for any indirect, incidental, or consequential damages arising from your use of the platform, including losses related to property transactions."
+          "To the maximum extent permitted by law, our liability is limited to the value of the work carried out. We are not liable for indirect or consequential loss, including loss of earnings while a vehicle is off the road."
         ]
       },
       {
-        "title": "10. Privacy",
+        "title": "10.  Privacy",
         "body": [
-          "Your use of Marby is also governed by our Privacy Policy, which explains how we collect and use your data."
+          "We use the contact details you give us to quote, carry out and follow up on your work. We do not sell your details. Ask us if you want your information removed."
         ]
       }
     ]
@@ -806,11 +828,11 @@
   {
     "id": "notFound",
     "title": "oops!",
-    "text": "We couldn't find the page you were looking for.",
+    "text": "We could not find the page you were looking for. The workshop is still here.",
     "cta": {
       "label": "go to homepage",
       "href": "/"
     },
-    "image": "/assets/site/I2adpByzj3kukOSA1lTr27x8Jug.webp"
+    "image": "/assets/site/hero-yard-poster.webp"
   }
 ]

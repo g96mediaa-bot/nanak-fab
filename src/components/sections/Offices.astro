@@ -64,9 +64,10 @@ const n = contact.offices.length;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
-    background: var(--ink-950-15);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: linear-gradient(180deg, rgba(4, 0, 186, 0.86) 0%, rgba(10, 9, 38, 0.94) 100%);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 0 1px var(--ink-50-20);
   }
   .ocard__progress { width: 100%; display: flex; flex-direction: column; align-items: flex-end; gap: 9px; }
   .ocard__bars { width: 100%; display: flex; gap: 4px; }
@@ -80,6 +81,6 @@ const n = contact.offices.length;
   .ocard__pair > div { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
   @media (max-width: 809.98px) {
     .office { position: relative; top: auto; z-index: 1; }
-    .ocard { width: 100%; }
+    .ocard { width: 100%; height: auto; min-height: 500px; }
   }
 </style>

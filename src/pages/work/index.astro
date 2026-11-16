@@ -1,0 +1,120 @@
+---
+import Base from '../../layouts/Base.astro';
+import Btn from '../../components/Btn.astro';
+import Icon from '../../components/Icon.astro';
+import WorkCard from '../../components/ui/WorkCard.astro';
+import QuestionTile from '../../components/ui/QuestionTile.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../../lib/site';
+const work = await site('work');
+const faq = await site('faq');
+const L = work.labels;
+const all = (await getCollection('work')).sort((a, b) => a.data.number.localeCompare(b.data.number));
+const categories = [...new Set(all.map((p) => p.data.category))];
+---
+<Base
+  title="Our Work — Truck Bodies & Accident Repair | Nanak Fabricators"
+  description="Tippers, enclosed bodies, tankers, trailers, coaches and accident repairs, fabricated in-house at our Athi River workshop."
+>
+  <section class="whero" data-dark>
+    <img class="whero__bg" src={work.hero.image} alt="" />
+    <div class="whero__blur" aria-hidden="true"></div>
+    <div class="container whero__inner">
+      <h1 class="t-h1 c-50" data-appear="mount">{work.hero.title}</h1>
+    </div>
+  </section>
+
+  <section class="wlist" data-filter>
+    <div class="container wlist__inner">
+      <div class="wlist__bar">
+        <div class="wlist__tabs" role="group" aria-label="Filter by body type" data-appear style="--appear-delay:0.2s">
+          <button class="tab" type="button" data-filter-tab="" aria-pressed="true">{L.all}</button>
+          {categories.map((c) => <button class="tab" type="button" data-filter-tab={c} aria-pressed="false">{c}</button>)}
+        </div>
+        <label class="wlist__search" data-appear style="--appear-delay:0.3s">
+          <span class="visually-hidden">Search body types</span>
+          <Icon name="search" class="wlist__search-icon" />
+          <input type="search" placeholder={L.search} data-filter-search />
+        </label>
+      </div>
+      <div class="wlist__grid" data-appear style="--appear-delay:0.4s">
+        {all.map((p, i) => <WorkCard p={p} eager={i < 2} />)}
+        <p class="t-body-lg wlist__empty" data-filter-empty hidden>{work.empty}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wfaq">
+    <div class="wfaq__inner">
+      <div class="wfaq__head">
+        <div class="wfaq__title">
+          <p class="t-caption2 eyebrow" data-appear>{faq.gridLabel}</p>
+          <h2 class="t-h1" data-appear style="--appear-delay:0.1s">{faq.title}</h2>
+        </div>
+        <p class="t-body-sm wfaq__text" data-appear style="--appear-delay:0.2s">{faq.text}</p>
+      </div>
+      <div class="wfaq__grid" data-accordion>
+        {faq.work.map((it: any, i: number) => <QuestionTile n={i + 1} q={it.q} a={it.a} delay={0.3 + i * 0.1} />)}
+        <div class="wfaq__contact" data-appear style={`--appear-delay:${0.3 + faq.work.length * 0.1}s`}>
+          <p class="t-body-lg">{faq.gridContact}</p>
+          <Btn label={faq.cta.label} href={faq.cta.href} />
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>
+<style>
+  .whero { position: relative; height: 400px; overflow: clip; display: flex; align-items: flex-end; justify-content: center; }
+  .whero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .whero__blur { position: absolute; inset: auto 0 0; height: 200px; background: var(--glass-warm); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+  .whero__inner { position: relative; height: 100%; display: flex; align-items: center; justify-content: center; padding-bottom: 20px; }
+
+  .wlist { padding-block: 80px; overflow: clip; }
+  .wlist__inner { display: flex; flex-direction: column; align-items: center; gap: 40px; }
+  .wlist__bar { width: 100%; display: flex; align-items: center; gap: 8px; }
+  .wlist__tabs { flex: 1; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+  .wlist__search { position: relative; width: 200px; display: flex; }
+  .wlist__search :global(.wlist__search-icon) { position: absolute; left: 8px; top: 50%; transform: translateY(-50%); color: var(--ink-500); pointer-events: none; }
+  .wlist__search input {
+    width: 100%;
+    height: 32px;
+    padding: 4px 0 4px 30px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--ink-50);
+    box-shadow: inset 0 0 0 1px var(--ink-200);
+    color: var(--ink-900);
+    font-size: 16px;
+    line-height: 1.2;
+    outline: none;
+  }
+  .wlist__search input::placeholder { color: var(--ink-500); }
+  .wlist__search input:focus { box-shadow: inset 0 0 0 1px var(--ink-950); }
+  .wlist__grid { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .wlist__grid > :global([hidden]) { display: none; }
+  .wlist__empty { grid-column: 1 / -1; min-height: 300px; display: grid; place-items: center; }
+
+  .wfaq { width: 1200px; max-width: 100%; margin-inline: auto; padding-block: 80px; background: var(--white); }
+  .wfaq__inner { padding: 0 20px; display: flex; flex-direction: column; gap: 40px; }
+  .wfaq__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; }
+  .wfaq__title { flex: 1; max-width: 460px; display: flex; flex-direction: column; gap: 12px; }
+  .wfaq__text { flex: 1; max-width: 460px; }
+  .wfaq__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .wfaq__contact { height: 362px; padding: 20px; display: flex; flex-direction: column; justify-content: flex-end; align-items: flex-start; gap: 20px; }
+  .wfaq__contact p { max-width: 341px; }
+
+  @media (max-width: 1199.98px) {
+    .wlist, .wfaq { padding-block: 40px; }
+    .wfaq__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
+  @media (max-width: 809.98px) {
+    .wlist__bar { flex-direction: column-reverse; align-items: stretch; gap: 20px; }
+    .wlist__search { width: 100%; }
+    .wlist__search input { height: 42px; }
+    .wlist__tabs .tab { box-shadow: inset 0 0 0 1px var(--ink-200); }
+    .wlist__grid { grid-template-columns: 1fr; }
+    .wfaq__head { flex-direction: column; align-items: flex-start; }
+    .wfaq__title, .wfaq__text { max-width: none; width: 100%; }
+    .wfaq__grid { grid-template-columns: 1fr; }
+  }
+</style>
