@@ -2,7 +2,7 @@
 name: "Enclosed Cargo Body"
 number: "[ 02 ]"
 category: "Enclosed Bodies"
-image: "/assets/site/minilorry.webp"
+image: "/assets/site/enclosed/bluesid.webp"
 imageAlt: "Enclosed cargo body interior during fabrication"
 secondaryImage: "/assets/site/whatwedo.webp"
 secondaryImageAlt: "Enclosed truck body being assembled by a Nanak technician"

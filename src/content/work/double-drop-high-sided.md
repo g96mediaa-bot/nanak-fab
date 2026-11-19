@@ -2,9 +2,9 @@
 name: "Double Drop High Sided Body"
 number: "[ 03 ]"
 category: "Double Drop High Sided"
-image: "/assets/site/whatwedo.webp"
+image: "/assets/site/doubleDropHigh/one.webp"
 imageAlt: "High sided truck body under construction"
-secondaryImage: "/assets/site/openlended.webp"
+secondaryImage: "/assets/site/doubleDropHigh/four.webp"
 secondaryImageAlt: "Drop-side lorry body in the yard"
 chassis: "Tata LPT 3118"
 bodyType: "Double drop high sided"
@@ -14,7 +14,13 @@ completed: "2024"
 finish: "Primer and 2-pack top coat"
 highlights: ["Double-drop side profile","High sides for bulk loads","Drop-side hinges along both flanks","Reinforced cross-members","Sealed floor joints"]
 specs: [{"label":"Body","value":"Double drop, 7.2 m"},{"label":"Side height","value":"1.5 m"},{"label":"Floor","value":"4 mm steel plate"}]
-gallery: [{"src":"/assets/site/whatwedo.webp","alt":"High sided body being built","caption":"Side framing"},{"src":"/assets/site/openlended.webp","alt":"Finished drop-side body","caption":"Drop sides fitted"},{"src":"/assets/site/yardaerialview.webp","alt":"Aerial view of the Nanak yard","caption":"Athi River yard"}]
+gallery: [
+    {"src":"/assets/site/doubleDropHigh/one.webp","alt":"High sided body being built","caption":"Side framing"},
+    {"src":"/assets/site/doubleDropHigh/four.webp","alt":"Finished drop-side body","caption":"Drop sides fitted"},
+    {"src":"/assets/site/doubleDropHigh/three.webp","alt":"Finished drop-side body","caption":"Drop sides fitted"},
+    {"src":"/assets/site/doubleDropHigh/two.webp","alt":"Finished drop-side body","caption":"Drop sides fitted"},
+    {"src":"/assets/site/yardaerialview.webp","alt":"Aerial view of the Nanak yard","caption":"Athi River yard"}
+    ]
 featured: false
 ---
 

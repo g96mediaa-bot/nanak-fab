@@ -195,7 +195,7 @@
           "counter": "/2",
           "label": "Services [ 02 ]",
           "title": "Tippers & Conversions",
-          "image": "/assets/site/tipper.webp",
+          "image": "/assets/site/tipper/tipperact.webp",
           "text": "Heavy-duty tipper bodies with hydraulic hoists, and conversion of existing prime movers into tippers — hoist, tank, pipework and paint.",
           "button": "our work",
           "href": "/work/tippers"
@@ -204,7 +204,7 @@
           "counter": "/3",
           "label": "Services [ 03 ]",
           "title": "Tankers & Bowsers",
-          "image": "/assets/site/fueltank.webp",
+          "image": "/assets/site/bowsers/3.webp",
           "text": "Fuel tanks, water bowsers, normal and hydraulic exhausters. Baffled shells, tested welds, valved discharge and hazard signage.",
           "button": "our work",
           "href": "/work/fuel-tanks"
@@ -222,16 +222,17 @@
           "counter": "/5",
           "label": "Services [ 05 ]",
           "title": "Accident Repair",
-          "image": "/assets/site/accidentrepair.webp",
+          "image": "/assets/site/accident/accidentrepair.webp",
           "text": "From dents and scratches to severe crash damage: cab straightening, chassis alignment, panel work and paint, with before-and-after records.",
           "button": "our work",
+
           "href": "/work/accident-repair"
         },
         {
           "counter": "/6",
           "label": "Services [ 06 ]",
           "title": "Chassis Shortening & Extension",
-          "image": "/assets/site/fabriwork.webp",
+          "image": "/assets/site/chasis/7.webp",
           "text": "Chassis shortened, extended, strengthened and aligned so a new body sits true and the truck tracks straight.",
           "button": "our work",
           "href": "/work"
@@ -255,9 +256,9 @@
           "name": "Fleet manager",
           "location": "Nairobi",
           "images": [
-            "/assets/site/tipper_workshop.webp",
+            "/assets/site/tipper/tipper_workshop.webp",
             "/assets/site/fabriwork.webp",
-            "/assets/site/tipper.webp"
+            "/assets/site/tipper/tipper.webp"
           ]
         },
         {
@@ -265,7 +266,7 @@
           "name": "Transport manager",
           "location": "Athi River",
           "images": [
-            "/assets/site/accidentrepair.webp",
+            "/assets/site/accident/accidentrepair.webp",
             "/assets/site/DSC_4492.webp",
             "/assets/site/minilorry.webp"
           ]
@@ -345,7 +346,7 @@
         "name": "Workshop Manager",
         "post": "production & quality",
         "city": "Athi River",
-        "image": "/assets/site/tipper_workshop.webp",
+        "image": "/assets/site/tipper/tipper_workshop.webp",
         "alt": "A tipper under assembly on the workshop floor"
       },
       {
@@ -361,7 +362,7 @@
         "name": "Panel & Paint Lead",
         "post": "beating, prep & spray",
         "city": "Athi River",
-        "image": "/assets/site/accidentrepair.webp",
+        "image": "/assets/site/accident/accidentrepair.webp",
         "alt": "A repaired truck cab after panel and paint work"
       },
       {
@@ -383,7 +384,7 @@
       "label": "Get in touch",
       "href": "/contact"
     },
-    "image": "/assets/site/tipper_workshop.webp",
+    "image": "/assets/site/tipper/tipper_workshop.webp",
     "imageAlt": "A tipper body being assembled at the Nanak workshop",
     "general": [
       {
@@ -547,9 +548,9 @@
         "counter": "/2",
         "label": "Sales & accidents [ 02 ]",
         "city": "Talk to Pami",
-        "image": "/assets/site/tipper_workshop.webp",
-        "imagePhone": "/assets/site/tipper_workshop.webp",
-        "text": "For new body enquiries, fleet work and accident repairs, speak to Parminder Singh (Pami) directly. Send photographs and the chassis number if the vehicle cannot be driven.",
+        "image": "/assets/site/tipper/tipper_workshop.webp",
+        "imagePhone": "/assets/site/tipper/tipper_workshop.webp",
+        "text": "For new body enquiries, fleet work and accident repairs, speak to Parminder Singh (Pami) directly. Send photographs and the chassis number if the vehicle cannot be driven.", 
         "address": [
           "Khim Business Park, Mombasa Road",
           "Athi River, Machakos County",
@@ -581,7 +582,7 @@
     "id": "work",
     "hero": {
       "title": "our work",
-      "image": "/assets/site/tipper_workshop.webp"
+      "image": "/assets/site/tipper/tipper_workshop.webp"
     },
     "empty": "No body types match that search. Try a different word, or call the workshop.",
     "advisor": {
@@ -673,13 +674,13 @@
         "number": "[ 03 ]",
         "title": "Accident Repairs",
         "text": "Cars, pickups, trucks and buses repaired after collision damage, with cab straightening, chassis alignment and a documented repair.",
-        "image": "/assets/site/accidentrepair.webp"
+        "image": "/assets/site/accident/accidentrepair.webp"
       },
       {
         "number": "[ 04 ]",
         "title": "Heavy Duty Tippers",
         "text": "Tipper bodies with hydraulic hoists, reinforced floors and sides, built for quarry, sand and construction haulage.",
-        "image": "/assets/site/tipper.webp"
+        "image": "/assets/site/tipper/tipper.webp"
       },
       {
         "number": "[ 05 ]",
@@ -691,7 +692,7 @@
         "number": "[ 06 ]",
         "title": "Fuel Tanks",
         "text": "Baffled fuel tank bodies with lockable fillers, vents, earthing points and hazard signage, pressure-tested before paint.",
-        "image": "/assets/site/fueltank.webp"
+        "image": "/assets/site/fueltanks/fueltank.webp"
       },
       {
         "number": "[ 07 ]",
@@ -709,13 +710,13 @@
         "number": "[ 09 ]",
         "title": "Water Tanks",
         "text": "Water bowsers for construction, dust suppression and supply, with baffled shells, manholes and valved discharge.",
-        "image": "/assets/site/fueltank.webp"
+        "image": "/assets/site/fueltanks/fueltank.webp"
       },
       {
         "number": "[ 10 ]",
         "title": "Conversion of Prime Movers to Tippers",
         "text": "Existing prime movers converted to tippers: hoist, hydraulic tank, pipework and body, engineered around the original chassis.",
-        "image": "/assets/site/tipper_workshop.webp"
+        "image": "/assets/site/tipper/tipper_workshop.webp"
       }
     ],
     "repair": {

@@ -3,7 +3,7 @@ order: 3
 title: "What happens to your truck after an accident"
 date: 2026-06-03
 category: "Accident repair"
-image: "/assets/site/accidentrepair.webp"
+image: "/assets/site/accident/accidentrepair.webp"
 imageAlt: "A damaged truck cab next to the same cab after repair"
 ---
 

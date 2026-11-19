@@ -36,5 +36,6 @@ end_of_line = crlf
 [makefile]
 indent_style = tab
 
-[*.{yml,yaml,toml,ini,json}]
-indent_size =2
+[*.{yml,yaml,toml,ini,json,ts,js,tsx,jsx, astro, md, mdx, astro, mjs, css}]
+indent_size = 2
+end_of_line = lf

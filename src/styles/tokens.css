@@ -7,9 +7,9 @@
  */
 :root {
   /* colour */
-  --ink-950: rgb(4, 0, 186); /* #0400ba — brochure deep blue */
+  --ink-950: rgb(41, 37, 106); /* #0400ba — brochure deep blue */
   --ink-900: rgb(13, 13, 18); /* #0d0d12 — body charcoal */
-  --ink-800: rgb(28, 31, 38);
+  --ink-800: rgb(38, 12, 78);
   --ink-700: rgb(58, 63, 74);
   --ink-600: rgb(87, 94, 107);
   --ink-500: rgb(118, 125, 138);
@@ -20,21 +20,21 @@
   --white: rgb(255, 255, 255);
   --ink-950-15: rgba(4, 0, 186, 0.16);
   --ink-50-20: rgba(244, 246, 249, 0.24);
-  --accent: rgb(233, 0, 0); /* #e90000 — brochure red */
+  --accent: #E30613; /* #e90000 — brochure red */
   --accent-ink: rgb(184, 0, 0); /* #b80000 — red legible at small sizes */
   --accent-on-dark: rgb(255, 75, 62); /* #ff4b3e — red lifted for blue sections */
   --accent-soft: rgba(233, 0, 0, 0.1);
   --error: rgb(196, 0, 0);
 
   /* brochure secondary colours */
-  --logo-blue: rgb(9, 33, 234); /* #0921ea — NF mark */
+  --logo-blue: rgb(38, 34, 97)  ; /* #0921ea — NF mark */
   --indigo: rgb(44, 31, 110); /* #2c1f6e — deep quote blocks */
   --peach: rgb(231, 204, 193); /* #e7ccc1 — stat / quote blocks */
   --blush: rgb(255, 240, 233); /* #fff0e9 — tinted sections */
 
   /* glass panels (feature cards, team cards, form, offices) */
   --glass-cool: linear-gradient(180deg, rgba(4, 0, 186, 0) 0%, rgba(4, 0, 186, 0.22) 100%);
-  --glass-warm: linear-gradient(180deg, rgba(13, 13, 18, 0) 0%, rgba(13, 13, 18, 0.3) 100%);
+  --glass-warm: linear-gradient(180deg,rgba(38, 33, 28, 0) 0%, rgba(38, 33, 28, 0.16) 100%);
 
   /* fonts */
   --font-sans: 'Urbanist', system-ui, sans-serif;

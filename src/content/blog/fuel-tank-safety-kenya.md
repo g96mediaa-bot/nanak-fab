@@ -3,7 +3,7 @@ order: 4
 title: "Fuel tank bodies: the safety details that are not optional"
 date: 2026-04-18
 category: "Compliance"
-image: "/assets/site/fueltank.webp"
+image: "/assets/site/fueltanks/fueltank.webp"
 imageAlt: "Danger Petroleum fuel tanker body"
 ---
 

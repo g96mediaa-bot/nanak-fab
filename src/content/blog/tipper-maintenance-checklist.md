@@ -3,7 +3,7 @@ order: 2
 title: "A tipper maintenance checklist for fleet managers"
 date: 2026-08-22
 category: "Maintenance"
-image: "/assets/site/tipper.webp"
+image: "/assets/site/tipper/tipper.webp"
 imageAlt: "A tipper body under construction in the workshop"
 ---
 
