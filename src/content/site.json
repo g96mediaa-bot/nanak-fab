@@ -131,7 +131,7 @@
     },
     "about": {
       "label": "[ About us ]",
-      "image": "/assets/site/whatwedo.webp",
+      "image": "/assets/site/yardaerialview.webp",
       "imageAlt": "Nanak technician fitting the side panels of a truck body",
       "title": "Body builders first, since 2012",
       "text": "Nanak Fabricators Ltd. was established and registered in 2012 at Khim Business Park, Athi River, by the late Hon. Jaswant Singh Matharu. The company is now run by his son, Parminder Singh (Pami), and has built a strong reputation in tippers, trailers, fuel and water tankers, exhausters and custom bodies on all makes of cars and trucks. We fabricate the body, straighten the chassis, beat the panels and finish the paint in one workshop — nothing is sent out and nothing leaves before it is right.",
@@ -495,7 +495,7 @@
     "beliefs": {
       "label": "[ Our approach ]",
       "title": "what we believe",
-      "image": "/assets/site/hero-yard-poster.webp",
+      "image": "/assets/site/yardaerialview.webp",
       "imageAlt": "Aerial view of the Nanak Fabricators yard with completed trucks",
       "items": [
         {
